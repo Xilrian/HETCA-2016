@@ -47,6 +47,12 @@
 
 \documentclass{sig-alternate-05-2015}
 
+\usepackage[flushleft]{threeparttable}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\setcounter{tocdepth}{3}
+\usepackage{array}
+
 
 \begin{document}
 
@@ -235,7 +241,9 @@ This paper is organized as follows. Section 2 highlights consequences of variabl
 In \cite{lipson2002origin} Lipson demonstrated a correlation between the modularity and the rate of change of the environment resources. While in \cite{yu2007program} Yu used  observed populations exploit neutrality to cope with environmental fluctuations and therefore evolve some sort of evolvability under 2 alternating objective functions. Both simulations used Genetic Programming (GP) and fitness explicit functions.
 
 \section{HetCA}
-
+HetCA is based on classical two-dimensional CA, to which it added the following features : Cells have "age", "decay", and "quiescence" properties; cells utilize a heterogeneous transition function inspired by linear genetic programming; and there exists a notion of genetic transfer of transition functions between adjacent cells
+HetCA exhibit longterm phenotypic dynamics, sustaining a high level of variance
+over very long runs and displayed greater behavioral diversity than classical cellular automata\cite{medernach2013long}. HetCA also display Shanahan \cite{shanahan2012evolutionary} definition of evolutionary progress on three criteria: robustness, size and density of generated genotypes\cite{medernach2015evolutionary}.
 
 The eukaryotic chromatin remodeling machinery, the cell cycle regulation
 systems \cite{koonin2002origin}, the nuclear envelope, the cytoskeleton, and the
@@ -253,7 +261,34 @@ We chose to introduce four forms of environmental fluctuations:
 - The strong fluctuation : consists of alternating between twelve environments ($\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$ and $\{1,1,1,1,1\}$) every 2500 iterations of the cellular automaton. The first eleven each prohibit a different combination of two states from the five living state, the latter gives equal chance to each of the five states.
 - The gradual fluctuation : is similar to the strong fluctuation except that it include a transition phase of $T=60$ iterations in between two environment where spread likehood values progressively switch from the value a previous environment to the ones of the new environment. During this phase the sate spreading is defined by the following formula : $K(S,t)=K_p(S) \times (T-t) + K_{p+1}(S) \times t$ where $t$ is the number of iteration achieved since the beginning of the transition phase; $K_p(S)$ and $K_{p+1}(S)$ are likelihood of spread of state $S$ for the curent environment and the next environment. 
 
-Owing to the variety of biological temporal rhythms and reproductive cycles the relevance of the following analogy is certainly limited . However \emph{short-cycle fluctuation} would be similar to what are the circadian rhythms for some bacteria: very regular cycles in which these organisms have enough time to reproduce several times. While \emph{light fluctuation} would be closer to seasonal fluctuations and \emph{strong and gradual fluctuations} would akin environnemental crisis. 
+Owing to the variety of biological temporal rhythms and reproductive cycles the relevance of the following analogy is certainly limited . However \emph{short-cycle fluctuation} would be similar to what are the circadian rhythms for some bacteria: very regular cycles in which these organisms have enough time to reproduce several times. While \emph{light fluctuation} would be closer to seasonal fluctuations and \emph{strong and gradual fluctuations} would akin ecological crisis. 
+
+
+\newcommand*{\TitleParbox}[1]{\parbox[l]{10cm}{\raggedright #1}}%
+\begin{table*}
+\caption{Environments.\label{tab:environments}}
+\scriptsize
+
+\begin{tabular}{lccccl}
+\toprule%
+{\textbf{Name}} & {\textbf{Short Name}} & \textbf{Cycles}\tnote{a} & \textbf{Transitions}\tnote{b} &\textbf{Environment list} \tabularnewline
+\toprule%
+\textbf{Stable Environment} & [SE] & NA & NA & \TitleParbox{$\{1,1,1,1,1\}$} \tabularnewline
+
+\textbf{Short-cycle Fluctuations} & [ScF] & 100 & 1 & \TitleParbox{$\{1,1,1,0,0\}$, $\{1,1,1,0,0\}$} \tabularnewline
+
+\textbf{Light Fluctuations} & [LF] & 2500 &  1 & \TitleParbox{$\{1,1,1,1,0\}$, $\{1,1,1,0,1\}$, $\{1,1,0,1,1\}$, $\{1,0,1,1,1\}$, $\{0,1,1,1,1\}$, $\{1,1,1,1,1\}$}\tabularnewline
+    
+\textbf{Strong Fluctuations} & [SF] & 2500 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
+
+\textbf{Gradual Fluctuations} & [GF] & 2500  & 60 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
+
+\bottomrule%
+\end{tabular}%
+\end{table*} 
+
+
+
 \section{Results}
 
 \section{Discussions}
