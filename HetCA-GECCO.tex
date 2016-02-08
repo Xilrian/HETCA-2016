@@ -226,7 +226,7 @@ Environmental changes can include introduction of new predator or new potencial 
 
 In \cite{lachmann1996inheritance} Lachemann model the consequences of such cycling variations on phenotypical inheritances. Their model predict that, when those cycles are longer than the reproductive cycle but relatively short heritable variations produced by non-DNA inheritance systems are likely to be observed.
 
-Many work in artificial life approach the issue of environmental variations, but the greater part are interested mainly in the spacial variations, or considering them as a problem to solve.
+Many work in artificial life approach the issue of environmental variations especially in evolutionary robotics\cite{floreano2000evolutionary}, but the greater part are interested mainly in the spacial variations, or considering them as a problem to solve.
 
 This paper is organized as follows. Section 2 highlights consequences of variable environment in biological evolution. In Section 3, we explain the mecanisms of HetCA simulation. The implementation of environmental fluctuation in HetCA  is then explained in Section 4. Section 5 details the computer experimental setup while we reports experimental results in Section 6. We discuss the implications of these results in Section 7. Finally, Section 8 concludes the paper.
 
@@ -236,6 +236,7 @@ In \cite{lipson2002origin} Lipson demonstrated a correlation between the modular
 
 \section{HetCA}
 
+
 The eukaryotic chromatin remodeling machinery, the cell cycle regulation
 systems \cite{koonin2002origin}, the nuclear envelope, the cytoskeleton, and the
 programmed cell death (PCD, or apoptosis) apparatus all are
@@ -243,7 +244,16 @@ such major eukaryotic innovations, which do not appear to
 have direct prokaryotic predecessors. 
 
 \section{Experimental Setup}
+Originally, in HetCA, the new genotype of a cell was randomly chosen among candidates genotypes. To introduce environmental variations, we chose to vary the likelihood of spread of the genotype of a cell according to the state of this cell. The chances of the candidate genotype of the cell $c$ to be selected are then: $c=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$ with $S_c$ state of the cell $c$, $K(S)$ likelihood of spread of state $S$ and $n$ number of candidate genotypes. Therefore an environment is characterized by the odds of propagation of the five living states $\{K(S_1),K(S_2),K(S_3),K(S_4),K(S_5)\}$.   
+To mimic environmental fluctuations we initialise the simulation with $K(S_i)=1  \forall i \in [1,5]$ and then we regularly change those values from iteration 3000 of the cellular automata. 
 
+We chose to introduce four forms of environmental fluctuations:
+- The short-cycle fluctuation : consists of alternating between two environments ($\{1,1,1,0,0\}$ and $\{1,1,1,0,0\}$) every 100 iterations of the cellular automaton. We chose to vary the environment every 100 iterations to stay in the same range of frequency as in Lispson \cite{lipson2002origin} examples 20 and 100 generations and \cite{yu2007program} experiments 10, 20 and 50 generations. In fact we consider that a successful reproductive cycle involves passing a cell through the quiescent state. And this should takes between two iterations (alternating between the quiescent state and a living state) and seven iterations  (if a cell remains in a living state four consecutive iterations it goes to the decay state and can not receive genotype for an important period).
+- The light fluctuation : consists of alternating between five environments ($\{1,1,1,1,0\}$, $\{1,1,1,0,1\}$, $\{1,1,0,1,1\}$, $\{1,0,1,1,1\}$, $\{0,1,1,1,1\}$ and $\{1,1,1,1,1\}$) every 2500 iterations of the cellular automaton. The first fives each prohibit a different state from the five living state, the latter gives equal chance to each of the five states.
+- The strong fluctuation : consists of alternating between twelve environments ($\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$ and $\{1,1,1,1,1\}$) every 2500 iterations of the cellular automaton. The first eleven each prohibit a different combination of two states from the five living state, the latter gives equal chance to each of the five states.
+- The gradual fluctuation : is similar to the strong fluctuation except that it include a transition phase of $T=60$ iterations in between two environment where spread likehood values progressively switch from the value a previous environment to the ones of the new environment. During this phase the sate spreading is defined by the following formula : $K(S,t)=K_p(S) \times (T-t) + K_{p+1}(S) \times t$ where $t$ is the number of iteration achieved since the beginning of the transition phase; $K_p(S)$ and $K_{p+1}(S)$ are likelihood of spread of state $S$ for the curent environment and the next environment. 
+
+Owing to the variety of biological temporal rhythms and reproductive cycles the relevance of the following analogy is certainly limited . However \emph{short-cycle fluctuation} would be similar to what are the circadian rhythms for some bacteria: very regular cycles in which these organisms have enough time to reproduce several times. While \emph{light fluctuation} would be closer to seasonal fluctuations and \emph{strong and gradual fluctuations} would akin environnemental crisis. 
 \section{Results}
 
 \section{Discussions}
