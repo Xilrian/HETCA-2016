@@ -39,7 +39,7 @@ Early population genetics theory assumed the environment to be constant\todo{cit
 
 Moreover, a proportion of existing work in artificial life, especially in evolutionary robotics \citep{floreano2000evolutionary}, considers the issue of environmental variations and among that literature some have explicitly define the environment as a driving evolutionary power \citep{bredeche2012environmentdrivenopenende} however as far as we know, nobody has systematically studied the general properties induced by such environmental fluctuation and a significant majority of the other works in that field still consider environmental changes only as a problem to be solved.   %However, it is probably fair to say that, a significant majority of these previous work has either focused on aspects such as normal spatial variation, or has viewed environmental change as a problem to be solved.
 
-\todo{hypotheses and question?}
+In this paper we propose a way to fill that gap and we propose an experimental setup that allows to mesure the influence of environmental fluctuations on the course of the evolution of a cellular automata. We show that such fluctuation lead to the emergence of strategies similar to those encontr
 
 This paper is organized as follows. Section~\ref{sec:bground}, we explain the mechanisms of HetCA simulation. The implementation of environmental fluctuation in HetCA is then explained in Section~\ref{sec:exsetup}. Section 5 details the computer experimental setup while we reports experimental results in Section~\ref{sec:results}. We discuss the implications of these results in Section~\ref{sec:discuss}. Finally, Section~\ref{sec:conc} concludes the paper.
 
@@ -145,14 +145,14 @@ To analyze the phenotypic plasticity and / or the existence of phenotypic select
  
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.75\columnwidth]{4steptransition}
+\includegraphics[width=0.75\columnwidth]{img/4steptransition}
 \caption{\textbf{Six steps survival strategy} from a genotype extracted from a HetCA simulation in a stable environment and tested here in a randomly initialized homogenous CA. }
   \label{foursteps}
 \end{figure}
  
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.75\columnwidth, angle =-90]{cyclesReal}
+\includegraphics[width=0.75\columnwidth, angle =-90]{img/cyclesReal}
 \caption{\textbf{Six steps survival strategy} from a HetCA simulation with \emph{Short-cycle Fluctuation}. }
   \label{fourstepsreal}
 \end{figure}
@@ -186,7 +186,7 @@ To analyze the phenotypic plasticity and / or the existence of phenotypic select
 \section{Results}\label{sec:results}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{Size}
+\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/Size}
 \caption{\textbf{Size of genotypes}. 
 }
 \label{fig:Size}
@@ -197,7 +197,7 @@ Figure~\ref{fig:Size} shows genotype size under the various study conditions. Th
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{Mutations}
+\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/Mutations}
 \caption{\textbf{Mutations of genotypes}.
 }
 \label{Mutations}
@@ -205,7 +205,7 @@ Figure~\ref{fig:Size} shows genotype size under the various study conditions. Th
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{diffProp}
+\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/diffProp}
 \caption{\textbf{Changes with following environment} : Here one can see that the impact of environmental fluctuations decreases for \emph{Short-cycle  Fluctuation} while it remains very high for other forms of environmental fluctuations.
 }
 \label{Mutations}
@@ -213,7 +213,7 @@ Figure~\ref{fig:Size} shows genotype size under the various study conditions. Th
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{ProgressProp}
+\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/ProgressProp}
 \caption{\textbf{Changes with similar environment} : Here one can see that the impact of environmental fluctuations decreases for \emph{Short-cycle  Fluctuation} and  \emph{Light  Fluctuation}  while it remains very high for other forms of environmental fluctuations.
 }
 \label{Mutations}
@@ -222,26 +222,26 @@ Figure~\ref{fig:Size} shows genotype size under the various study conditions. Th
 \begin{figure}[H]
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{boxdensitystable.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxdensitystable.eps}
   \caption{Stable environment.}
   \label{fig:sfig1}
 \end{subfigure}%
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{boxdensityvariation.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxdensityvariation.eps}
   \caption{Strong Fluctuation.}
   \label{fig:sfig2}
 \end{subfigure}
 
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{boxdensityvariationLight.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxdensityvariationLight.eps}
   \caption{Light Fluctuation.}
   \label{fig:sfig2}
 \end{subfigure}%
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{boxdensityvariationSmall.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxdensityvariationSmall.eps}
   \caption{Small Fluctuation.}
   \label{fig:sfig1}
 \end{subfigure}
@@ -252,26 +252,26 @@ Figure~\ref{fig:Size} shows genotype size under the various study conditions. Th
 \begin{figure}[H]
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{boxendingsFailedstable.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedstable.eps}
   \caption{Stable environment.}
   \label{fig:sfig1}
 \end{subfigure}%
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{boxendingsFailedvariation.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariation.eps}
   \caption{Strong Fluctuation.}
   \label{fig:sfig2}
 \end{subfigure}
 
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{boxendingsFailedvariationLight.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariationLight.eps}
   \caption{Light Fluctuation.}
   \label{fig:sfig2}
 \end{subfigure}%
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{boxendingsFailedvariationSmall.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariationSmall.eps}
   \caption{Small Fluctuation.}
   \label{fig:sfig1}
 \end{subfigure}
