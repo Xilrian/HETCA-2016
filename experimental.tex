@@ -1,0 +1,69 @@
+
+\subsection{Environmental Fluctuations}
+Originally, in HetCA, the new genotype of a cell was randomly chosen among candidate genotypes. In order to introduce environmental variations, we chose to vary the likelihood of spread of the genotype of a cell according to the state of this cell. The chances of the candidate genotype of the cell $c$ to be selected are then: $c=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$ with $S_c$ state of the cell $c$, $K(S)$ likelihood of spread of state $S$ and $n$ number of candidate genotypes. Therefore an environment is characterized by the odds of propagation of the five living states $\{K(S_1),K(S_2),K(S_3),K(S_4),K(S_5)\}$.   
+To mimic environmental fluctuations we initialise the simulation with $K(S_i)=1  \forall i \in [1,5]$ and then we regularly change those values from iteration 3000 of the cellular automata. 
+
+We chose to introduce four forms of environmental fluctuations described in Table~\ref{tab:environments}.
+
+\noindent \emph{Short-cycle Fluctuation}: consists of alternating between two environments every 100 iterations of the cellular automaton. We chose to vary the environment every 100 iterations to stay in the same range of frequency as described in Lispson~\citep{lipson2002origin} examples 20 and 100 generations and~\citep{yu2007program} experiments 10, 20 and 50 generations. In fact we consider that a successful reproductive cycle involves passing a cell through the quiescent state. And this should take between two iterations (alternating between the quiescent state and a living state) and seven iterations (if a cell remains in a living state more than seven consecutive iterations it goes to the decay state and can not receive a genotype for an important period).
+
+\noindent \emph{Light Fluctuation}: consists of alternating between five environments every 5000 iterations of the cellular automaton. The first five each prohibit a different state from the five living state, the latter gives equal chance to each of the five states.
+
+\noindent \emph{Strong Fluctuation}: consists of alternating between twelve environments every 5000 iterations of the cellular automaton. The first eleven each prohibit a different combination of two states from the five living states, the latter gives equal chance to each of the five states.
+
+\noindent \emph{Gradual Fluctuation}: is similar to strong fluctuation except that it includes a transition phase of $T=60$ iterations in between two environments where likelihood of spread of state values progressively switch from the value a previous environment to the ones of the new environment. Over this phase the state spreading is defined by the following formula : $K(S,t)=K_p(S) \times (T-t) + K_{p+1}(S) \times t$ where $t$ is the number of iterations completed since the beginning of the transition phase; $K_p(S)$ and $K_{p+1}(S)$ are likelihood of state spread $S$ for the current environment and the next environment respectively.
+
+\emph{Short-cycle fluctuation} may be analogous to the circadian rhythms for some bacteria: very regular cycles in which these organisms have enough time to reproduce several times. While \emph{light fluctuation} may be similar to seasonal fluctuations and \emph{strong and gradual fluctuations} would akin ecological crisis. Although, owing to the variety of both biological temporal rhythms and reproductive cycles, the relevance of these analogies may be limited. 
+
+\subsection{Common Settings}\label{sec:commonset}
+For each form of environmental fluctuation and the stable non fluctuating environment, we performed 50 simulations, each on 500000 iterations with the parameters listed in Table~\ref{settings}. The genotypes of an individual are its transition rules encoded with CA-LGP using the function set depicted in Table~\ref{funcSet}. Mutation of genotypes is enabled and we use the Micro/Marco-mutation of CA-LGP as described in \citep{medernach2013long}.
+
+\begin{table}
+\scriptsize
+\centering
+\begin{tabular}{l>{\centering}p{0.2\columnwidth}}\toprule%
+Parameter & Value \tabularnewline
+\toprule%
+Number of living states & 5\tabularnewline
+Successive living iterations before decay & 7\tabularnewline
+Number of iterations for decay & 375-1875\tabularnewline
+Direct transition to decay & enabled\tabularnewline
+Size of the grid & 500x500\tabularnewline
+Grid boundaries & toric grid\tabularnewline
+Transition Rule~(TR) & CA-LGP\tabularnewline
+Maximum (TR) size & 50 program statements\tabularnewline
+Genotype copy neighbouring  & Von Neumann \tabularnewline
+Transition rule neighbouring & Moore\tabularnewline
+\bottomrule%
+\end{tabular}
+\caption{ \textbf{HetCA parameters}.}
+  \label{settings}
+\end{table}
+
+
+\begin{table}
+\scriptsize
+\centering
+  \begin{tabular}{l>{\centering}p{0.6\columnwidth}}
+  \toprule%
+    \textbf{op. name}	& \textbf{action} on inputs $(x,y)$\tabularnewline
+ \toprule%   
+    abs			& $|x|$ \tabularnewline
+    plus		& $x+y$ \tabularnewline
+    delta		& 1, if $|x-y| < 1/10000$; 0 o.w. \tabularnewline
+    dist		& $|x-y|$ \tabularnewline
+    inv			& $1-x$ \tabularnewline
+    inv2		& safeDiv($1, x$) \tabularnewline
+    magPlus		& $|x+y|$ \tabularnewline
+    max			& $\max \{x,y\}$ \tabularnewline
+    min			& $\min \{x,y\}$ \tabularnewline
+    safeDiv		& $x/y$ if $|y| >  1/10000$; 1 o.w. \tabularnewline
+    safePow		& $x^y$, if defined; 1 o.w. \tabularnewline
+    thresh		& 1, if $x > y$; 0 o.w.\tabularnewline
+    times		& $xy$ \tabularnewline
+    zero		& 1, if $|x| < 1/10000$; 0 o.w. \tabularnewline
+\bottomrule%
+  \end{tabular}
+    \caption{\textbf{Function set}. \label{funcSet}}
+\end{table}
+
