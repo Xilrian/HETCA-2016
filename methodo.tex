@@ -1,5 +1,7 @@
 
 
+For each form of environmental fluctuation and the stable non fluctuating environment, we performed 50 simulations, each on 500000 iterations with the parameters listed in Table~\ref{settings}.
+
 \subsection{Genotype Size}
 We use the number of program statements ($n_{prog}$) as a measure of the genotype size and compute the average size of all the current genotypes of a run every 2500 iterations. We then report the average and standard error among all the fifty runs sharing the same settings.
 
@@ -53,3 +55,28 @@ To analyze the phenotypic plasticity and / or the existence of phenotypic select
 \bottomrule%
 \end{tabular}%
 \end{table*} 
+
+
+
+
+\begin{table}
+\scriptsize
+\centering
+\begin{tabular}{l>{\centering}p{0.2\columnwidth}}\toprule%
+Parameter & Value \tabularnewline
+\toprule%
+Number of living states & 5\tabularnewline
+Successive living iterations before decay & 7\tabularnewline
+Number of iterations for decay & 375-1875\tabularnewline
+Direct transition to decay & enabled\tabularnewline
+Size of the grid & 500x500\tabularnewline
+Grid boundaries & toric grid\tabularnewline
+Transition Rule~(TR) & CA-LGP\tabularnewline
+Maximum (TR) size & 50 program statements\tabularnewline
+Genotype copy neighbouring  & Von Neumann \tabularnewline
+Transition rule neighbouring & Moore\tabularnewline
+\bottomrule%
+\end{tabular}
+\caption{ \textbf{HetCA parameters}.}
+  \label{settings}
+\end{table}
