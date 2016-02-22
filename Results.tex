@@ -37,8 +37,10 @@ Figure~\ref{fig:disimilar} depict phenotypic comparison of disimilar environment
 \label{fig:similar}
 \end{figure}
 
-\subsection{Success Rate}
-Success rates of genotypes in different homogenous simulations are reported in Table \ref{tab:scstable} to \ref{tab:scstrong} using normal approximation interval with a confidence of 95\%. Looking at the different success rates we can first order the different tested environment by increasing difficulty : \em{Stable Environment}; \em{Short-cycle Fluctuations}; \em{Light Fluctuations} ; \em{Strong Fluctuations}. The fact that the \em{stable environment} offers the lowest challenge is not surprising. Similarly the fact that \em{Light Fluctuations} are less difficult than \em{Strong fluctuations} is quite expected. We believe that the slightest difficulty in \em{Short-cycle Fluctuations} than in \em{Light Fluctuations} is due to the reduced number of different environment in \em{Short-cycle Fluctuations} and in particular the fact that in this configuration one of the living state is always allowed. It is also noteworthy that while individuals from \em{Strong and Light Fluctuations} seem relatively robust in various environmental configurations while those from \em{Short-cycle Fluctuations} doesn't seem robust outside environmental conditions in which they evolved. Moreover these same individuals are the only ones that do not reach a 100\% survival ratio in a stable environment from 102500 iteration.
+\subsection{Success Rate end ending iteration of homogenous test}
+Success rates of genotypes in different homogenous simulations are reported in Table \ref{tab:scstable} to \ref{tab:scstrong} using normal approximation interval with a confidence of 95\%. Looking at the different success rates we can first order the different tested environment by increasing difficulty : \emph{Stable Environment}; \emph{Short-cycle Fluctuations}; \emph{Light Fluctuations} ; \emph{Strong Fluctuations}. The fact that the \emph{stable environment} offers the lowest challenge is not surprising. Similarly the fact that \emph{Light Fluctuations} are less difficult than \emph{Strong fluctuations} is quite expected. We believe that the slightest difficulty in \emph{Short-cycle Fluctuations} than in \emph{Light Fluctuations} is due to the reduced number of different environment in \emph{Short-cycle Fluctuations} and, in particular, to the fact that, in this configuration, one of the living state is allowed for all environments $K(S_3)=1$. It is also noteworthy that individuals from \emph{Strong and Light Fluctuations} seem relatively robust in various environmental configurations while those from \emph{Short-cycle Fluctuations} doesn't seem robust outside environmental conditions in which they evolved. Moreover, among genotypes collected from iteration 102500, these same individuals are the only ones that do not reach a 100\% survival ratio in a stable environment.
+ 
+
 
 \begin{table*}
 \caption{Success Rate of genotypes in homogenous test with stable environment.\label{tab:scstable}}
@@ -112,9 +114,37 @@ Success rates of genotypes in different homogenous simulations are reported in T
 
 \subsection{Last iterations}
 
+Figure \ref{fig:ending} depict the last iteration with living cells of homogenous runs that didn't reach 60000. Note that \emph{Short-cycle Fluctuation} genotypes failures are concentrated around iteration 15000 on \emph{Light Fluctuation} homogenous test and around iteration 25000 on \emph{Strong Fluctuation} homogenous test. This corresponds, for these two configurations, to the first environment for which $K(S_3)=0$, while $K(S_3)=1$ for every environment used in \emph{Short-cycle Fluctuation}. 
 
+\begin{figure}[H]
+\begin{subfigure}{.25\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedstable.eps}
+  \caption{Stable environment.}
+  \label{fig:sfig1}
+\end{subfigure}%
+\begin{subfigure}{.25\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariation.eps}
+  \caption{Strong Fluctuation.}
+  \label{fig:sfig2}
+\end{subfigure}
 
-
+\begin{subfigure}{.25\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariationLight.eps}
+  \caption{Light Fluctuation.}
+  \label{fig:sfig2}
+\end{subfigure}%
+\begin{subfigure}{.25\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariationSmall.eps}
+  \caption{Small Fluctuation.}
+  \label{fig:sfig1}
+\end{subfigure}
+\caption{Last iteration with living cells of homogenous runs that didn't reach 60000. iterations.}
+\label{fig:ending}
+\end{figure}
 
 \begin{figure}[H]
 \begin{subfigure}{.25\textwidth}
@@ -143,35 +173,5 @@ Success rates of genotypes in different homogenous simulations are reported in T
   \label{fig:sfig1}
 \end{subfigure}
 \caption{Density of Genotype : Each genotype density is processed in four possible different environments.}
-\label{fig:size}
-\end{figure}
-
-\begin{figure}[H]
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedstable.eps}
-  \caption{Stable environment.}
-  \label{fig:sfig1}
-\end{subfigure}%
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariation.eps}
-  \caption{Strong Fluctuation.}
-  \label{fig:sfig2}
-\end{subfigure}
-
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariationLight.eps}
-  \caption{Light Fluctuation.}
-  \label{fig:sfig2}
-\end{subfigure}%
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariationSmall.eps}
-  \caption{Small Fluctuation.}
-  \label{fig:sfig1}
-\end{subfigure}
-\caption{Last iteration with living cells of density runs that didn't reach 60000 iterations. Note that \emph{Short-cycle Fluctuation} genotypes failures are concentrated around iteration 15000 on \emph{Light Fluctuation} density test and around iteration 25000 on \emph{Strong Fluctuation} density test.}
 \label{fig:size}
 \end{figure}
