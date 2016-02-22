@@ -1,25 +1,9 @@
 
 \subsection{Environmental Fluctuations}
  As in the previous version of HetCA the genotype of an individual is its transition rules encoded with CA-LGP using the function set depicted in Table~\ref{funcSet}. The mutation of genotypes is enabled and we use the Micro/Marco-mutation of CA-LGP as described in \citep{medernach2013long}.
-
-But in order to introduce environmental variations, where the new genotype of a cell was originally randomly chosen among candidate genotypes we vary the likelihood of spread of the genotype of a cell according to the state of this cell. In this new setup, the chances of the candidate genotype of the cell $c$ to be selected are then: \todo{ya pas deux $c$ differents dans cette notation?} $c=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$ with $S_c$ state of the cell $c$, $K(S)$ likelihood of spread of state $S$ and $n$ number of candidate genotypes. Therefore an environment is characterized by the odds of propagation of the five living states $\{K(S_1),K(S_2),K(S_3),K(S_4),K(S_5)\}$.   
-To mimic environmental fluctuations we initialise the simulation with $K(S_i)=1  \forall i \in [1,5]$ and then we regularly change those values from iteration 3000 of the cellular automata. 
-
-We chose to introduce four forms of environmental fluctuations described in Table~\ref{tab:environments}.
-
-\noindent \emph{Short-cycle Fluctuation}: consists of alternating between two environments every 100 iterations of the cellular automaton. We chose to vary the environment every 100 iterations to stay in the same range of frequency as described in Lispson~\citep{lipson2002origin} examples 20 and 100 generations and~\citep{yu2007program} experiments 10, 20 and 50 generations. In fact we consider that a successful reproductive cycle involves passing a cell through the quiescent state. And this should take between two iterations (alternating between the quiescent state and a living state) and seven iterations (if a cell remains in a living state more than seven consecutive iterations it goes to the decay state and can not receive a genotype for an important period).
-
-\noindent \emph{Light Fluctuation}: consists of alternating between five environments every 5000 iterations of the cellular automaton. The first five each prohibit a different state from the five living state, the latter gives equal chance to each of the five states.
-
-\noindent \emph{Strong Fluctuation}: consists of alternating between twelve environments every 5000 iterations of the cellular automaton. The first eleven each prohibit a different combination of two states from the five living states, the latter gives equal chance to each of the five states.
-
-\noindent \emph{Gradual Fluctuation}: is similar to strong fluctuation except that it includes a transition phase of $T=60$ iterations in between two environments where likelihood of spread of state values progressively switch from the value a previous environment to the ones of the new environment. Over this phase the state spreading is defined by the following formula : $K(S,t)=K_p(S) \times (T-t) + K_{p+1}(S) \times t$ where $t$ is the number of iterations completed since the beginning of the transition phase; $K_p(S)$ and $K_{p+1}(S)$ are likelihood of state spread $S$ for the current environment and the next environment respectively.
-
-\emph{Short-cycle fluctuation} may be analogous to the circadian rhythms for some bacteria: very regular cycles in which these organisms have enough time to reproduce several times. While \emph{light fluctuation} may be similar to seasonal fluctuations and \emph{strong and gradual fluctuations} would akin ecological crisis. Although, owing to the variety of both biological temporal rhythms and reproductive cycles, the relevance of these analogies may be limited. 
-
-%\subsection{Common Settings}\label{sec:commonset}
-
-\begin{table}
+ 
+ 
+ \begin{table}
 \scriptsize
 \centering
   \begin{tabular}{l>{\centering}p{0.6\columnwidth}}
@@ -44,3 +28,45 @@ We chose to introduce four forms of environmental fluctuations described in Tabl
   \end{tabular}
     \caption{\textbf{Function set}. \label{funcSet}}
 \end{table}
+
+But in order to introduce environmental variations, where the new genotype of a cell was originally randomly chosen among candidate genotypes we vary the likelihood of spread of the genotype of a cell according to the state of this cell. In this new setup, the chances $P(c)$ of the candidate genotype of the cell $c$ to be selected are then: $P(c)=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$ with $S_c$ state of the cell $c$, $K(S)$ likelihood of spread of state $S$ and $n$ number of candidate genotypes. Therefore an environment $E$ is characterized by the odds of propagation of the five living states $E=\{K(S_1),K(S_2),K(S_3),K(S_4),K(S_5)\}$.   
+To mimic environmental fluctuations we initialise the simulation with $K(S_i)=1  \forall i \in [1,5]$ and then we regularly change those values every $f$ iterations from iteration 3000 of the cellular automata. 
+
+We chose to introduce four forms of environmental fluctuations described in Table~\ref{tab:environments}.
+
+\newcommand*{\TitleParbox}[1]{\parbox[l]{10cm}{\raggedright #1}}%
+\begin{table*}
+\caption{Environments.\label{tab:environments}}
+\scriptsize
+
+\begin{tabular}{lccccl}
+\toprule%
+{\textbf{Name}} & {\textbf{Short Name}} & \textbf{Cycles}\tnote{a} & \textbf{Transitions}\tnote{b} &\textbf{Environment list} \tabularnewline
+\toprule%
+\textbf{Stable Environment} & [SE] & NA & NA & \TitleParbox{$\{1,1,1,1,1\}$} \tabularnewline
+
+\textbf{Short-cycle Fluctuations} & [ScF] & 100 & 1 & \TitleParbox{$\{1,1,1,0,0\}$, $\{1,1,1,0,0\}$} \tabularnewline
+
+\textbf{Light Fluctuations} & [LF] & 5000 &  1 & \TitleParbox{$\{1,1,1,1,0\}$, $\{1,1,1,0,1\}$, $\{1,1,0,1,1\}$, $\{1,0,1,1,1\}$, $\{0,1,1,1,1\}$, $\{1,1,1,1,1\}$}\tabularnewline
+    
+\textbf{Strong Fluctuations} & [SF] & 5000 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
+
+%\textbf{Gradual Fluctuations} & [GF] & 5000  & 60 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
+
+\bottomrule%
+\end{tabular}%
+\end{table*} 
+
+\noindent \emph{Short-cycle Fluctuation}: consists of alternating between two environments every 100 iterations of the cellular automaton. We chose to vary the environment every $f=100$ iterations to stay in the same range of frequency as described in Lispson~\citep{lipson2002origin} examples 20 and 100 generations and~\citep{yu2007program} experiments 10, 20 and 50 generations. In fact we consider that a successful reproductive cycle involves passing a cell through the quiescent state. And this should take between two iterations (alternating between the quiescent state and a living state) and seven iterations (if a cell remains in a living state more than seven consecutive iterations it goes to the decay state and can not receive a genotype for an important period).
+
+\noindent \emph{Light Fluctuation}: consists of alternating between five environments every $f=5000$ iterations of the cellular automaton. The first five each prohibit a different state from the five living state, the latter gives equal chance to each of the five states.
+
+\noindent \emph{Strong Fluctuation}: consists of alternating between twelve environments every $f=5000$ iterations of the cellular automaton. The first eleven each prohibit a different combination of two states from the five living states, the latter gives equal chance to each of the five states.
+
+%\noindent \emph{Gradual Fluctuation}: is similar to strong fluctuation except that it includes a transition phase of $T=60$ iterations in between two environments where likelihood of spread of state values progressively switch from the value a previous environment to the ones of the new environment. Over this phase the state spreading is defined by the following formula : $K(S,t)=K_p(S) \times (T-t) + K_{p+1}(S) \times t$ where $t$ is the number of iterations completed since the beginning of the transition phase; $K_p(S)$ and $K_{p+1}(S)$ are likelihood of state spread $S$ for the current environment and the next environment respectively.
+
+\emph{Short-cycle fluctuation} may be analogous to the circadian rhythms for some bacteria: very regular cycles in which these organisms have enough time to reproduce several times. While \emph{light fluctuation} may be similar to seasonal fluctuations and \emph{strong fluctuations} would akin ecological crisis. Although, owing to the variety of both biological temporal rhythms and reproductive cycles, the relevance of these analogies may be limited. 
+
+%\subsection{Common Settings}\label{sec:commonset}
+
+
