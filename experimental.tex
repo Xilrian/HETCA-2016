@@ -1,6 +1,6 @@
 
 \subsection{Environmental Fluctuations}
- As in the previous version of HetCA the genotype of an individual is its transition rules encoded with CA-LGP using the function set depicted in Table~\ref{funcSet}. The mutation of genotypes is enabled and we use the Micro/Marco-mutation of CA-LGP as described in \citep{medernach2013long}.
+ As in the previous version of HetCA the genotype of an individual is its transition rules encoded with CA-LGP using the function set depicted in Table~\ref{funcSet}. The mutation of genotypes is enabled using the Micro/Marco-mutation of CA-LGP as described in \citep{medernach2013long}.
  
  
  \begin{table}
@@ -29,7 +29,7 @@
     \caption{\textbf{Function set}. \label{funcSet}}
 \end{table}
 
-But in order to introduce environmental variations, where the new genotype of a cell was originally randomly chosen among candidate genotypes we vary the likelihood of spread of the genotype of a cell according to the state of this cell. In this new setup, the chances $P(c)$ of the candidate genotype of the cell $c$ to be selected are then: $P(c)=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$ with $S_c$ state of the cell $c$, $K(S)$ likelihood of spread of state $S$ and $n$ number of candidate genotypes. Therefore an environment $E$ is characterized by the odds of propagation of the five living states $E=\{K(S_1),K(S_2),K(S_3),K(S_4),K(S_5)\}$.   
+To introduce environmental variations, where the new genotype of a cell was originally randomly chosen among candidate genotypes, we vary the likelihood of spread of the genotype of a cell according to the state of this cell. In this new setup, the chances $P(c)$ of the candidate genotype of the cell $c$ to be selected are then: $P(c)=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$ with $S_c$ state of the cell $c$, $K(S)$ likelihood of spread of state $S$ and $n$ number of candidate genotypes. Therefore an environment $E$ is characterized by the odds of propagation of the five living states $E=\{K(S_1),K(S_2),K(S_3),K(S_4),K(S_5)\}$.   
 To mimic environmental fluctuations we initialise the simulation with $K(S_i)=1  \forall i \in [1,5]$ and then we regularly change those values every $f$ iterations from iteration 3000 of the cellular automata. 
 
 We chose to introduce four forms of environmental fluctuations described in Table~\ref{tab:environments}.
