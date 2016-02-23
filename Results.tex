@@ -35,6 +35,28 @@ Figure~\ref{fig:disimilar} depict phenotypic comparison of disimilar environment
 \label{fig:similar}
 \end{figure}
 
+
+
+
+\subsection{Phenotypic and Genotypic Diversity}
+Figure \ref{fig:phenodiv} and \ref{fig:genodiv} depict the average phenotypic and genotypic diversities of . 
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/PhenoDiv}
+\caption{\textbf{Phenotypic diversity}.}
+\label{fig:phenodiv}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/GenoDiversity}
+\caption{\textbf{Genotypic diversity}.}
+\label{fig:genodiv}
+\end{figure}
+
 \subsection{Success Rate and ending iteration of homogenous test}
 Success rates of genotypes in different homogenous simulations are reported in Table \ref{tab:scstable} to \ref{tab:scstrong} using normal approximation interval with a confidence of 95\%. Looking at the different success rates we can first order the different tested environment by increasing difficulty : \emph{Stable Environment}; \emph{Short-cycle Fluctuations}; \emph{Light Fluctuations} ; \emph{Strong Fluctuations}. The fact that the \emph{stable environment} offers the lowest challenge is not surprising. Similarly the fact that \emph{Light Fluctuations} are less difficult than \emph{Strong fluctuations} is quite expected. We believe that the slightest difficulty in \emph{Short-cycle Fluctuations} than in \emph{Light Fluctuations} is due to the reduced number of different environment in \emph{Short-cycle Fluctuations} and, in particular, to the fact that, in this configuration, one of the living state is allowed for all environments $K(S_3)=1$. It is also noteworthy that individuals from \emph{Strong and Light Fluctuations} seem relatively robust in various environmental configurations while those from \emph{Short-cycle Fluctuations} doesn't seem robust outside environmental conditions in which they evolved. Moreover, among genotypes collected from iteration 102500, these same individuals are the only ones that do not reach a 100\% survival ratio in a stable environment.
  
@@ -112,7 +134,10 @@ Success rates of genotypes in different homogenous simulations are reported in T
 
 \subsection{Ending iteration}
 
-Figure \ref{fig:ending} depict the last iteration with living cells of homogenous runs that didn't reach 60000. Note that \emph{Short-cycle Fluctuation} genotypes failures are concentrated around iteration 15000 on \emph{Light Fluctuation} homogenous test and around iteration 25000 on \emph{Strong Fluctuation} homogenous test. This corresponds, for these two configurations, to the first environment for which $K(S_3)=0$, while $K(S_3)=1$ for every environment used in \emph{Short-cycle Fluctuation}. But we also see that some of the genotypes from \emph{Short-cycle Fluctuation} fail during the early iterations of Homogenous test regardless of the used configurations including \emph{Stable Environment} and \emph{Short-cycle Fluctuation}. This imply that the ecosystem resulting the evolutionary history of individuals plays an key role in their ability to survive. RAJOUTER QUOTATION JABLONKA SIMON
+Figure \ref{fig:ending} depict the last iteration with living cells of homogenous runs that didn't reach 60000. Note that \emph{Short-cycle Fluctuation} genotypes failures are concentrated around iteration 15000 on \emph{Light Fluctuation} homogenous test and around iteration 25000 on \emph{Strong Fluctuation} homogenous test. This corresponds, for these two configurations, to the first environment for which $K(S_3)=0$, while $K(S_3)=1$ for every environment used in \emph{Short-cycle Fluctuation}. But we also see that some of the genotypes from \emph{Short-cycle Fluctuation} fail during the early iterations of Homogenous test regardless of the used configurations including \emph{Stable Environment} and \emph{Short-cycle Fluctuation}.
+
+This imply that the ecosystem resulting the evolutionary history of individuals plays an key role in their ability to survive. This failure reminds the impossibility of saving species by the unique preservation of their DNA mentioned in \cite{jablonka2014evolution}
+\say{You would have to reconstruct the community, and often these communities are very old, with historical memories that are stored in their epigenetic and behavioral systems. These are part of their “identity,” part of their stability. You cannot freeze these memories: they have to be maintained and transmitted through use, so you cannot reconstruct the communities from their component parts.}\emph{(ibid. p. 363)}.
 
 \begin{figure}[H]
 \begin{subfigure}{.25\textwidth}
@@ -177,23 +202,4 @@ Figure \ref{fig:density} depict the density of phenotypes as measured in homogen
 \end{subfigure}
 \caption{Density of Genotype : Each genotype density is processed in four possible different environments.}
 \label{fig:density}
-\end{figure}
-
-\subsection{Phenotypic and Genotypic Diversity}
-Figure \ref{fig:phenodiv} and \ref{fig:genodiv} depict the density of phenotypes as measured in homogeneous tests. 
-
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/PhenoDiv}
-\caption{\textbf{Phenotypic diversity}.}
-\label{fig:phenodiv}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/GenoDiversity}
-\caption{\textbf{Genotypic diversity}.}
-\label{fig:genodiv}
 \end{figure}
