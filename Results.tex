@@ -1,4 +1,5 @@
 \subsection{Genotype Size \& Genotype mutations}
+
 Figure~\ref{fig:Size} shows genotype size under the various study conditions. The size is bounded (50 is the maximum size) and it limits the differences between those environments as most simulations converge towards this limit, however, one can clearly see here that \emph{Short-cycle Fluctuation} restrict the size of the genotypes while other forms of fluctuations do not appear to have any effect on genotype size. This size reduction could be a way to increase the impact of genotypic mutations on the phenotype. Indeed even if in LGP, when a mutation occurs, its effect is proportional to the size of the genotype, long genotype may enable redundancy information to stabilize the phenotype. Figure~\ref{fig:Size} depicts the amount of accumulated mutation of the most common individual. The amount of mutations separating the current most common individual from individuals created at initialization of the simulation. It is not surprising that more mutations are selected when there are environmental fluctuations\footnote{And those seem to depend more on the strength of these fluctuations than on their periodicity.} but we note that the proximity of strong fluctuation and Short Cycle fluctuations indicates that their genotype difference in size is not only explained by differences in the number of selected mutations.
 
 
@@ -202,3 +203,22 @@ Figure \ref{fig:density} depict the density of phenotypes as measured in homogen
 \caption{Density of Genotype : Each genotype density is processed in four possible different environments.}
 \label{fig:density}
 \end{figure}
+
+\begin{table*}
+\caption{Success Rate of genotypes in homogenous test with stable environment.\label{tab:scstable}}
+\scriptsize
+\begin{tabular}{rl ccc ccc ccc ccc}
+    \multicolumn{2}{r}{\textbf{Original Environment}} & \multicolumn{3}{c}{\textbf{Stable Environment (SE)}} & \multicolumn{3}{c}{\textbf{Short-cycle Fluctuations (ScF)}} & \multicolumn{3}{c}{\textbf{Light Fluctuations (LF)}}& \multicolumn{3}{c}{\textbf{Strong Fluctuations (SF)}}\tabularnewline
+    \multicolumn{2}{r}{\textbf{Time of Selection}} & \textbf{2500} & \textbf{202500} & \textbf{500000}&\textbf{2500} & \textbf{202500}& \textbf{500000}&\textbf{2500} & \textbf{202500}& \textbf{500000}&\textbf{2500} & \textbf{202500}& \textbf{500000}\tabularnewline
+\toprule%
+\textbf{Eniv. of Test}& \textbf{SE} 	& $88(9)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$\tabularnewline
+
+&\textbf{ScF}	& $98(4)\%$ & $88(9)\%$ & $88(9)\%$ & $88(9)\%$ & $88(9)\%$ & $88(9)\%$\tabularnewline
+
+&\textbf{LF} 	& $94(6)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$\tabularnewline
+
+&\textbf{SF} 	& $96(5)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$\tabularnewline
+
+\bottomrule%
+\end{tabular}%
+\end{table*} 
