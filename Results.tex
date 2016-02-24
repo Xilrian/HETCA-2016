@@ -60,78 +60,14 @@ Figure \ref{fig:phenodiv} and \ref{fig:genodiv} depict the average phenotypic an
 
 \subsection{Success Rate and ending iteration of homogenous test}
 Success rates of genotypes in different homogenous simulations are reported in Table \ref{tab:scstable} to \ref{tab:scstrong} using normal approximation interval with a confidence of 95\%. Looking at the different success rates we can first order the different tested environment by increasing difficulty : \emph{Stable Environment}; \emph{Short-cycle Fluctuations}; \emph{Light Fluctuations} ; \emph{Strong Fluctuations}. The fact that the \emph{stable environment} offers the lowest challenge is not surprising. Similarly the fact that \emph{Light Fluctuations} are less difficult than \emph{Strong fluctuations} is quite expected. We believe that the slightest difficulty in \emph{Short-cycle Fluctuations} than in \emph{Light Fluctuations} is due to the reduced number of different environment in \emph{Short-cycle Fluctuations} and, in particular, to the fact that, in this configuration, one of the living state is allowed for all environments $K(S_3)=1$. It is also noteworthy that individuals from \emph{Strong and Light Fluctuations} seem relatively robust in various environmental configurations while those from \emph{Short-cycle Fluctuations} doesn't seem robust outside environmental conditions in which they evolved. Moreover, among genotypes collected from iteration 102500, these same individuals are the only ones that do not reach a 100\% survival ratio in a stable environment.
- 
 
 
-\begin{table*}
-\caption{Success Rate of genotypes in homogenous test with stable environment.\label{tab:scstable}}
-\scriptsize
-\begin{tabular}{ccccccc}
-\toprule%
-{\textbf{Collection}} & {\textbf{2500}} & \textbf{102500} & \textbf{202500} &\textbf{302500} &\textbf{402500} &\textbf{500000} \tabularnewline
-\toprule%
-\textbf{Stable Environment} & $88\%\pm9\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$\tabularnewline
-
-\textbf{Short-cycle Fluctuations} & $98\%\pm4\%$ & $88\%\pm9\%$ & $88\%\pm9\%$ & $88\%\pm9\%$ & $88\%\pm9\%$ & $88\%\pm9\%$\tabularnewline
-
-\textbf{Light Fluctuations} & $94\%\pm6\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$\tabularnewline
-
-\textbf{Strong Fluctuations} & $96\%\pm5\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$ & $100\%\pm0\%$\tabularnewline
-
-\bottomrule%
-\end{tabular}%
-\end{table*} 
-
-\begin{table*}
-\caption{Success Rate of genotypes in homogenous test with Short Cycle Fluctuations.\label{tab:scshort}}
-\scriptsize
-\begin{tabular}{ccccccc}
-\toprule%
-{\textbf{Collection}} & {\textbf{2500}} & \textbf{102500} & \textbf{202500} &\textbf{302500} &\textbf{402500} &\textbf{500000} \tabularnewline
-\toprule%
-
-\textbf{Stable Environment} & $37\%\pm13\%$ & $55\%\pm14\%$ & $45\%\pm14\%$ & $55\%\pm14\%$ & $57\%\pm14\%$ & $47\%\pm14\%$ \tabularnewline
-\textbf{Short-cycle Fluctuations} & $33\%\pm13\%$ & $88\%\pm9\%$ & $88\%\pm9\%$ & $88\%\pm9\%$ & $88\%\pm9\%$ & $88\%\pm9\%$ \tabularnewline
-\textbf{Light Fluctuations} &$29\%\pm13\%$ & $61\%\pm13\%$ & $69\%\pm13\%$ & $69\%\pm13\%$ & $84\%\pm10\%$ & $82\%\pm10\%$ \tabularnewline
-\textbf{Strong Fluctuations} &$40\%\pm14\%$ & $80\%\pm11\%$ & $96\%\pm5\%$ & $96\%\pm5\%$ & $90\%\pm8\%$ & $86\%\pm9\%$\tabularnewline
-
-\bottomrule%
-\end{tabular}%
-\end{table*} 
-
-\begin{table*}
-\caption{Success Rate of genotypes in homogenous test with Light Fluctuations.\label{tab:scslight}}
-\scriptsize
-\begin{tabular}{ccccccc}
-\toprule%
-{\textbf{Collection}} & {\textbf{2500}} & \textbf{102500} & \textbf{202500} &\textbf{302500} &\textbf{402500} &\textbf{500000} \tabularnewline
-\toprule%
-
-\textbf{Stable Environment} & $20\%\pm11\%$ & $59\%\pm14\%$ & $65\%\pm13\%$ & $73\%\pm12\%$ & $73\%\pm12\%$ & $67\%\pm13\%$\tabularnewline
-\textbf{Short-cycle Fluctuations} & $18\%\pm10\%$ & $20\%\pm11\%$ & $14\%\pm9\%$ & $10\%\pm8\%$ & $8\%\pm7\%$ & $6\%\pm6\%$\tabularnewline
-\textbf{Light Fluctuations} &$20\%\pm11\%$ & $90\%\pm8\%$ & $96\%\pm5\%$ & $98\%\pm4\%$ & $100\%\pm0\%$ & $98\%\pm4\%$\tabularnewline
-\textbf{Strong Fluctuations} &$24\%\pm12\%$ & $90\%\pm8\%$ & $98\%\pm4\%$ & $96\%\pm5\%$ & $96\%\pm5\%$ & $100\%\pm0\%$\tabularnewline
-
-\bottomrule%
-\end{tabular}%
-\end{table*} 
-
-\begin{table*}
-\caption{Success Rate of genotypes in homogenous test with Strong Fluctuations.\label{tab:scstrong}}
-\scriptsize
-\begin{tabular}{ccccccc}
-\toprule%
-{\textbf{Collection}} & {\textbf{2500}} & \textbf{102500} & \textbf{202500} &\textbf{302500} &\textbf{402500} &\textbf{500000} \tabularnewline
-\toprule%
-
-\textbf{Stable Environment} & $0\%\pm0\%$ & $16\%\pm10\%$ & $16\%\pm10\%$ & $14\%\pm9\%$ & $12\%\pm9\%$ & $12\%\pm9\%$\tabularnewline
-\textbf{Short-cycle Fluctuations} & $0\%\pm0\%$ & $4\%\pm5\%$ & $2\%\pm4\%$ & $4\%\pm5\%$ & $0\%\pm0\%$ & $0\%\pm0\%$\tabularnewline
-\textbf{Light Fluctuations} & $2\%\pm4\%$ & $16\%\pm10\%$ & $25\%\pm12\%$ & $29\%\pm13\%$ & $29\%\pm13\%$ & $45\%\pm14\%$\tabularnewline
-\textbf{Strong Fluctuations} & $0\%\pm0\%$ & $31\%\pm13\%$ & $43\%\pm14\%$ & $55\%\pm14\%$ & $55\%\pm14\%$ & $55\%\pm14\%$\tabularnewline
-
-\bottomrule%
-\end{tabular}%
-\end{table*} 
+\begin{figure*}[h]
+\centering
+\includegraphics[width=2\columnwidth]{img/testSurvivingRates}
+\caption{\textbf{Success Rate of genotypes in Homogenous Tests}.}
+\label{fig:genodiv}
+\end{figure*}
 
 \subsection{Ending iteration}
 
@@ -204,21 +140,4 @@ Figure \ref{fig:density} depict the density of phenotypes as measured in homogen
 \label{fig:density}
 \end{figure}
 
-\begin{table*}
-\caption{Success Rate of genotypes in homogenous test with stable environment.\label{tab:scstable}}
-\scriptsize
-\begin{tabular}{rl ccc ccc ccc ccc}
-    \multicolumn{2}{r}{\textbf{Original Environment}} & \multicolumn{3}{c}{\textbf{Stable Environment (SE)}} & \multicolumn{3}{c}{\textbf{Short-cycle Fluctuations (ScF)}} & \multicolumn{3}{c}{\textbf{Light Fluctuations (LF)}}& \multicolumn{3}{c}{\textbf{Strong Fluctuations (SF)}}\tabularnewline
-    \multicolumn{2}{r}{\textbf{Time of Selection}} & \textbf{2500} & \textbf{202500} & \textbf{500000}&\textbf{2500} & \textbf{202500}& \textbf{500000}&\textbf{2500} & \textbf{202500}& \textbf{500000}&\textbf{2500} & \textbf{202500}& \textbf{500000}\tabularnewline
-\toprule%
-\textbf{Eniv. of Test}& \textbf{SE} 	& $88(9)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$\tabularnewline
 
-&\textbf{ScF}	& $98(4)\%$ & $88(9)\%$ & $88(9)\%$ & $88(9)\%$ & $88(9)\%$ & $88(9)\%$\tabularnewline
-
-&\textbf{LF} 	& $94(6)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$\tabularnewline
-
-&\textbf{SF} 	& $96(5)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$ & $100(0)\%$\tabularnewline
-
-\bottomrule%
-\end{tabular}%
-\end{table*} 
