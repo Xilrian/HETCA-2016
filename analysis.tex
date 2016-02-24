@@ -1,27 +1,35 @@
+\subsection{Transitions between environment} 
+Figure \ref{fig:trans} depicts the typical transition between environments in different homogenous runs. To compute this typical transition we averaged k calculated at iterations $[t-40; t + 40]$ for every $t \in T_r$ of a run $r$ where $T_r$ is the set of every iteration of $r$ when a transitions between environments occurs. Figure  \ref{fig:transonly} shows the different typical transitions of \emph{Short-Cycle Fluctuation} genotypes tested a homogeneous test with the same fluctuations. We can see that phenotypes of the genotypes collected later in the evolutionary process are less sensitive to environmental fluctuations. Conversely, as reported of Figure \ref{fig:transli}, the phenotypes of genotypes from \emph{Short-Cycle Fluctuation} keep the same high sensitivity regardless of the iteration in which they were collected.
+
+
 \begin{figure}[H]
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/avg499999stableb.eps}
-  \caption{Stable environment.}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/Failavg499999variationb.eps}
+  \caption{Strong Fluctuation.}
+  \label{fig:transst}
 \end{subfigure}%
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/avg499999variationb.eps}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/avgvarValidvariationb.eps}
   \caption{Strong Fluctuation.}
+  \label{fig:transli}
 \end{subfigure}
 
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/avg499999variationLightb.eps}
-  \caption{Light Fluctuation.}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/Failavg499999variationSmallb.eps}
+  \caption{Short-Cycle Fluctuation.}
+  \label{fig:transstest}
 \end{subfigure}%
 \begin{subfigure}{.25\textwidth}
   \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/avg499999variationSmallb.eps}
-  \caption{Small Fluctuation.}
+  \includegraphics[width=.7\linewidth, angle =-90]{img/FailavgvarSmallValidvariationSmallb.eps}
+  \caption{Short-Cycle Fluctuation.}
+  \label{fig:transonly}
 \end{subfigure}
-\caption{Density of Genotype : Each genotype density is processed in four possible different environments.}
-\label{fig:density}
+\caption{Typical transition between environment in different types of homogenous test.}
+\label{fig:trans}
 \end{figure}
 
 
