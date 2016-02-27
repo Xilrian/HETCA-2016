@@ -1,6 +1,6 @@
 \subsection{Genotype Size \& Genotype mutations}
 
-Figure~\ref{fig:Size} shows genotype size under the various study conditions. The size is bounded (50 is the maximum size) and it limits the differences between those environments as most simulations converge towards this limit, however, one can clearly see here that \emph{Short-cycle Fluctuation} restrict the size of the genotypes while other forms of fluctuations do not appear to have any effect on genotype size. This size reduction could be a way to increase the impact of genotypic mutations on the phenotype. Indeed even if in LGP, when a mutation occurs, its effect is proportional to the size of the genotype, long genotype may enable redundancy information to stabilize the phenotype. Figure~\ref{fig:Size} depicts the amount of accumulated mutation of the most common individual. The amount of mutations separating the current most common individual from individuals created at initialization of the simulation. It is not surprising that more mutations are selected when there are environmental fluctuations\footnote{And those seem to depend more on the strength of these fluctuations than on their periodicity.} but we note that the proximity of strong fluctuation and Short Cycle fluctuations indicates that their genotype difference in size is not only explained by differences in the number of selected mutations.
+Figure~\ref{fig:Size} shows genotype size under the various study conditions. The size is bounded (50 is the maximum size) and it limits the differences between those environments as most simulations converge towards this limit, however, one can clearly see here that \emph{Short-cycle Fluctuation} restrict the size of the genotypes while other forms of fluctuations do not appear to have any effect on genotype size. This size reduction could be a way to increase the impact of genotypic mutations on the phenotype. Indeed even if in LGP, when a mutation occurs, its effect is proportional to the size of the genotype, long genotype may enable redundancy information to stabilize the phenotype. Figure~\ref{fig:Size} depicts the amount of mutations separating the current most common individual from individuals created at initialization of the simulation. It is not surprising that more mutations are selected when there are environmental fluctuations\footnote{And those seem to depend more on the strength of these fluctuations than on their periodicity.} but we note that the proximity of strong fluctuations and Short Cycle fluctuations indicates that their genotype difference in size is not only explained by differences in the number of selected mutations.
 
 
 \begin{figure}[h]
@@ -53,12 +53,12 @@ Figure \ref{fig:phenodiv} and \ref{fig:genodiv} depict the average phenotypic an
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/GenoDiversity}
+\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/GenoDiv}
 \caption{\textbf{Genotypic diversity}.}
 \label{fig:genodiv}
 \end{figure}
 
-\subsection{Success Rate and ending iteration of homogenous test}
+\subsection{Success Rate of Homogenous Test}
 Success rates of genotypes in different homogenous simulations are reported in Figure \ref{fig:survrate} using normal approximation interval with a confidence of 95\%. Looking at the different success rates we can first order the different tested environment by increasing difficulty : \emph{Stable Environment}; \emph{Short-cycle Fluctuations}; \emph{Light Fluctuations} ; \emph{Strong Fluctuations}. The fact that the \emph{stable environment} offers the lowest challenge is not surprising. Similarly the fact that \emph{Light Fluctuations} are less difficult than \emph{Strong fluctuations} is quite expected. We believe that the slightest difficulty in \emph{Short-cycle Fluctuations} than in \emph{Light Fluctuations} is due to the reduced number of different environment in \emph{Short-cycle Fluctuations} and, in particular, to the fact that, in this configuration, one of the living state is allowed for all environments $K(S_3)=1$. It is also noteworthy that individuals from \emph{Strong and Light Fluctuations} seem relatively robust in various environmental configurations while those from \emph{Short-cycle Fluctuations} doesn't seem robust outside environmental conditions in which they evolved. Moreover, among genotypes collected from iteration 102500, these same individuals are the only ones that do not reach a 100\% survival ratio in a stable environment.
 
 
@@ -69,7 +69,7 @@ Success rates of genotypes in different homogenous simulations are reported in F
 \label{fig:survrate}
 \end{figure*}
 
-\subsection{Ending iteration}
+\subsection{Ending Iteration}
 
 Figure \ref{fig:ending} depict the last iteration with living cells of homogenous runs that didn't reach 60000. Note that \emph{Short-cycle Fluctuation} genotypes failures are concentrated around iteration 15000 on \emph{Light Fluctuation} homogenous test and around iteration 25000 on \emph{Strong Fluctuation} homogenous test. This corresponds, for these two configurations, to the first environment for which $K(S_3)=0$, while $K(S_3)=1$ for every environment used in \emph{Short-cycle Fluctuation}. But we also see that some of the genotypes from \emph{Short-cycle Fluctuation} fail during the early iterations of Homogenous test regardless of the used configurations including \emph{Stable Environment} and \emph{Short-cycle Fluctuation}.
 
@@ -101,7 +101,7 @@ This imply that the ecosystem resulting the evolutionary history of individuals 
   \caption{Small Fluctuation.}
   \label{fig:sfig1}
 \end{subfigure}
-\caption{Last iteration with living cells of homogenous runs that didn't reach 60000. iterations.}
+\caption{\textbf{Last iteration with living cells} of homogenous runs that didn't reach 60000 iterations.}
 \label{fig:ending}
 \end{figure}
 

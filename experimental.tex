@@ -1,6 +1,5 @@
 
-\subsection{Environmental Fluctuations}
- As in the previous version of HetCA the genotype of an individual is its transition rules encoded with CA-LGP using the function set depicted in Table~\ref{funcSet}. The mutation of genotypes is enabled using the Micro/Marco-mutation of CA-LGP as described in \citep{medernach2013long}.
+As in the previous version of HetCA the genotype of an individual is its transition rules encoded with CA-LGP using the function set depicted in Table~\ref{funcSet}. The mutation of genotypes is enabled using the Micro/Marco-mutation of CA-LGP as described in \citep{medernach2013long}.
  
  
  \begin{table}
@@ -63,7 +62,7 @@ We chose to introduce four forms of environmental fluctuations described in Tabl
 
 \noindent \emph{Strong Fluctuation}: consists of alternating between twelve environments every $f=5000$ iterations of the cellular automaton. The first eleven each prohibit a different combination of two states from the five living states, the latter gives equal chance to each of the five states.
 
-%\noindent \emph{Gradual Fluctuation}: is similar to strong fluctuation except that it includes a transition phase of $T=60$ iterations in between two environments where likelihood of spread of state values progressively switch from the value a previous environment to the ones of the new environment. Over this phase the state spreading is defined by the following formula : $K(S,t)=K_p(S) \times (T-t) + K_{p+1}(S) \times t$ where $t$ is the number of iterations completed since the beginning of the transition phase; $K_p(S)$ and $K_{p+1}(S)$ are likelihood of state spread $S$ for the current environment and the next environment respectively.
+%\noindent \emph{Gradual Fluctuation}: is similar to strong fluctuations except that it includes a transition phase of $T=60$ iterations in between two environments where likelihood of spread of state values progressively switch from the value a previous environment to the ones of the new environment. Over this phase the state spreading is defined by the following formula : $K(S,t)=K_p(S) \times (T-t) + K_{p+1}(S) \times t$ where $t$ is the number of iterations completed since the beginning of the transition phase; $K_p(S)$ and $K_{p+1}(S)$ are likelihood of state spread $S$ for the current environment and the next environment respectively.
 
 \emph{Short-cycle fluctuation} may be analogous to the circadian rhythms for some bacteria: very regular cycles in which these organisms have enough time to reproduce several times. While \emph{light fluctuation} may be similar to seasonal fluctuations and \emph{strong fluctuations} would akin ecological crisis. Although, owing to the variety of both biological temporal rhythms and reproductive cycles, the relevance of these analogies may be limited. 
 
