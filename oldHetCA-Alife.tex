@@ -1,0 +1,68 @@
+\documentclass[letterpaper]{article}
+\usepackage{natbib,alifeconf}
+\usepackage{hyperref}
+\usepackage{todonotes}
+
+
+\usepackage[flushleft]{threeparttable}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\setcounter{tocdepth}{3}
+\usepackage{array}
+\usepackage{float}
+\usepackage{dirtytalk}
+
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
+
+\title{Evolution of Heterogeneous Cellular Automata in Fluctuating Environments}
+\author{First Author$^{1}$, Second Author$^{1,2}$, Third Author$^{1,2}$, Fourth Author$^{1,2}$ \and Fifth Author$^2$ \\
+\mbox{}\\
+$^1$First affiliation  \\
+$^2$Second affiliation \\
+corresponding@author.email}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The importance of environmental fluctuations in the evolution by natural selection of living beings has been widely noted by biologists and linked to many important characteristics of life such as: modularity, plasticity, genotype size, mutation rate, learning or epigenetic adaptations. However, in artificial life simulations, environmental fluctuations are usually seen as a problem to be solved rather than an essential characteristic of evolution. HetCA is a heterogeneous cellular automata characterized by its ability to generate open ended long-term evolution and evolutionary progress. We propose, in this paper, to use it to measure the impact of different forms of environmental fluctuations. Our results indicate that environmental fluctuations induce mechanisms analogous to epigenetic adaptations in HetCA.
+\end{abstract}
+
+
+
+\section{Introduction}\label{sec:intro}
+\input{introduction.tex}
+
+%\section{Background}\label{sec:bground}
+%\input{background.tex}
+
+\section{HetCA}\label{sec:hetca)}
+\input{hetca.tex}
+
+\section{Experimental Setup}\label{sec:exsetup}
+\input{experimental.tex}
+
+\section{Simulation}\label{sec:method}
+\input{methodo.tex}
+
+
+\section{Results}\label{sec:method}
+\input{Results.tex}
+
+
+
+\section{Analysis}
+\input{analysis.tex}
+
+
+\section{Conclusions}\label{sec:conc}
+\input{conclusion.tex}
+
+\section{Acknowledgement}
+The authors gratefully the support of Science Foundation Ireland, grant number:
+\bibliography{David,Simon}
+\bibliographystyle{apalike}
+\end{document}
