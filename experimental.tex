@@ -1,8 +1,6 @@
-
-As in the previous version of HetCA the genotype of an individual is its transition rules encoded with CA-LGP using the function set depicted in Table~\ref{funcSet}. The mutation of genotypes is enabled using the Micro/Marco-mutation of CA-LGP as described in \citep{medernach2013long}.
+As in the previous version of HetCA \citep{medernach2013long}, the genotype of an individual consists of its transition rules encoded in a custom CA-LGP program using the function set listed in Table~\ref{funcSet}. Such a program maps the space of neighborhood states to a new cell state, while providing an evolvable representation framework based on an alphabet of elementary functions. Individual genotypes are modified by micro-mutations (change in one component of a statement) and macro-mutations (addition or removal of an entire statement) of the corresponding CA-LGP programs.
  
- 
- \begin{table}
+\begin{table}
 \scriptsize
 \centering
   \begin{tabular}{l>{\centering}p{0.6\columnwidth}}
@@ -11,61 +9,56 @@ As in the previous version of HetCA the genotype of an individual is its transit
  \toprule%   
     abs			& $|x|$ \tabularnewline
     plus		& $x+y$ \tabularnewline
-    delta		& 1, if $|x-y| < 1/10000$; 0 o.w. \tabularnewline
+    delta		& 1, if $|x-y| < 1/10,000$; 0 o.w. \tabularnewline
     dist		& $|x-y|$ \tabularnewline
     inv			& $1-x$ \tabularnewline
     inv2		& safeDiv($1, x$) \tabularnewline
     magPlus		& $|x+y|$ \tabularnewline
     max			& $\max \{x,y\}$ \tabularnewline
     min			& $\min \{x,y\}$ \tabularnewline
-    safeDiv		& $x/y$ if $|y| >  1/10000$; 1 o.w. \tabularnewline
+    safeDiv		& $x/y$ if $|y| >  1/10,000$; 1 o.w. \tabularnewline
     safePow		& $x^y$, if defined; 1 o.w. \tabularnewline
     thresh		& 1, if $x > y$; 0 o.w.\tabularnewline
     times		& $xy$ \tabularnewline
-    zero		& 1, if $|x| < 1/10000$; 0 o.w. \tabularnewline
+    zero		& 1, if $|x| < 1/10,000$; 0 o.w. \tabularnewline
 \bottomrule%
   \end{tabular}
     \caption{\textbf{Function set}. \label{funcSet}}
 \end{table}
 
-To introduce environmental variations, where the new genotype of a cell was originally randomly chosen among candidate genotypes, we vary the likelihood of spread of the genotype of a cell according to the state of this cell. In this new setup, the chances $P(c)$ of the candidate genotype of the cell $c$ to be selected are then: $P(c)=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$ with $S_c$ state of the cell $c$, $K(S)$ likelihood of spread of state $S$ and $n$ number of candidate genotypes. Therefore an environment $E$ is characterized by the odds of propagation of the five living states $E=\{K(S_1),K(S_2),K(S_3),K(S_4),K(S_5)\}$.   
-To mimic environmental fluctuations we initialise the simulation with $K(S_i)=1  \forall i \in [1,5]$ and then we regularly change those values every $f$ iterations from iteration 3000 of the cellular automata. 
-
-We chose to introduce three forms of environmental fluctuations described in Table~\ref{tab:environments}.
+Previously, the new genotype of a living cell $c$ during genetic transfer was chosen randomly among candidate neighboring genotypes according to a uniform distribution. In the present study, to introduce environmental variations we vary the likelihood of propagation of a genotype according to its cell state $S_c$. In this new setup, the probability $P(c)$ of a candidate genotype to be selected becomes $P(c)=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$, where $K(S)$ the state distribution and $n$ the number of candidate genotypes. Therefore an environment $E$ is characterized by the propagation probabilities of the 5 living states: $E=\{K(S_1),...,K(S_5)\}$. To mimic environmental fluctuations we initialize the simulation with $K(S_i)=1$ everywhere, then regularly modify those values every $f$ iterations starting from iteration 3,000 of the CA. We introduce three types of environmental fluctuations (Table~\ref{tab:environments}):
 
 \newcommand*{\TitleParbox}[1]{\parbox[l]{10cm}{\raggedright #1}}%
 \begin{table*}
-\caption{Environments.\label{tab:environments}}
+\caption{Stable and fluctuating environments.\label{tab:environments}}
 \scriptsize
 
 \begin{tabular}{lccccl}
 \toprule%
-{\textbf{Name}} & {\textbf{Short Name}} & \textbf{Cycles}\tnote{a} & \textbf{Transitions}\tnote{b} &\textbf{Environment list} \tabularnewline
+{\textbf{Name}} & {\textbf{Short Name}} & \textbf{Cycles}\tnote{a} & \textbf{Transitions}\tnote{b} &\textbf{Environment list: propagation probabilities $E = \{K(S_1),...,K(S_5)\}$ of the living types} \tabularnewline
 \toprule%
-\textbf{Stable Environment} & [SE] & NA & NA & \TitleParbox{$\{1,1,1,1,1\}$} \tabularnewline
+\textbf{Stable Environment} & (SE) & NA & NA & \TitleParbox{$\{1,1,1,1,1\}$} \tabularnewline
 
-\textbf{Short-cycle Fluctuations} & [ScF] & 100 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$} \tabularnewline
+\textbf{Short-cycle Fluctuations} & (ScF) & 100 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$} \tabularnewline
 
-\textbf{Light Fluctuations} & [LF] & 5000 &  1 & \TitleParbox{$\{1,1,1,1,0\}$, $\{1,1,1,0,1\}$, $\{1,1,0,1,1\}$, $\{1,0,1,1,1\}$, $\{0,1,1,1,1\}$, $\{1,1,1,1,1\}$}\tabularnewline
+\textbf{Light Fluctuations} & (LF) & 5,000 &  1 & \TitleParbox{$\{1,1,1,1,0\}$, $\{1,1,1,0,1\}$, $\{1,1,0,1,1\}$, $\{1,0,1,1,1\}$, $\{0,1,1,1,1\}$, $\{1,1,1,1,1\}$}\tabularnewline
     
-\textbf{Strong Fluctuations} & [SF] & 5000 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
+\textbf{Strong Fluctuations} & (SF) & 5,000 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
 
-%\textbf{Gradual Fluctuations} & [GF] & 5000  & 60 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
+%\textbf{Gradual Fluctuations} & (GF) & 5,000  & 60 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
 
 \bottomrule%
 \end{tabular}%
 \end{table*} 
 
-\noindent \emph{Short-cycle Fluctuation}: consists of alternating between two environments every 100 iterations of the cellular automaton. We chose to vary the environment every $f=100$ iterations to stay in the same range of frequency as described in Lispson~\citep{lipson2002origin} examples 20 and 100 generations and~\citep{yu2007program} experiments 10, 20 and 50 generations. In fact we consider that a successful reproductive cycle involves passing a cell through the quiescent state. And this should take between two iterations (alternating between the quiescent state and a living state) and seven iterations (if a cell remains in a living state more than seven consecutive iterations it goes to the decay state and can not receive a genotype for an important period).
+\emph{Short-cycle fluctuations (ScF)} consist of alternating between two environments every $f$ iterations of the CA. We choose $f=100$ to remain within the range of frequency described by \citet{lipson2002origin} and \citet{yu2007program}. Here we consider that a successful reproductive cycle for a cell involves passing through the quiescent state. This should take between 2 iterations (alternating between quiescent and living) and 7 iterations (after which a living cell decays and can no longer receive a genotype for a long period of time).
 
-\noindent \emph{Light Fluctuation}: consists of alternating between six environments every $f=5000$ iterations of the cellular automaton. The first five each prohibit a different state from the five living state, the latter gives equal chance to each of the five states.
+\emph{Light fluctuations (LF)} consist of alternating between 6 environments every $f=5,000$ iterations. The first 5 environments each prohibit a different living state (out 5 possible ones) from spreading its genotype; the last one gives an equal chance to all living states.
 
-\noindent \emph{Strong Fluctuation}: consists of alternating between twelve environments every $f=5000$ iterations of the cellular automaton. The first eleven each prohibit a different combination of two states from the five living states, the latter gives equal chance to each of the five states.
+\emph{Strong fluctuations (SF)} consist of alternating between 11 environments every $f=5,000$ iterations. The first 10 environments each prohibit a different pair of living states (out 10 possible ones) from spreading their genotypes; the last one gives an equal chance to all pairs.
 
 %\noindent \emph{Gradual Fluctuation}: is similar to strong fluctuations except that it includes a transition phase of $T=60$ iterations in between two environments where likelihood of spread of state values progressively switch from the value a previous environment to the ones of the new environment. Over this phase the state spreading is defined by the following formula : $K(S,t)=K_p(S) \times (T-t) + K_{p+1}(S) \times t$ where $t$ is the number of iterations completed since the beginning of the transition phase; $K_p(S)$ and $K_{p+1}(S)$ are likelihood of state spread $S$ for the current environment and the next environment respectively.
 
-\emph{Short-cycle fluctuation} may be analogous to the circadian rhythms for some bacteria: very regular cycles in which these organisms have enough time to reproduce several times. While \emph{light fluctuation} may be similar to seasonal fluctuations and \emph{strong fluctuations} would akin ecological crisis. Although, owing to the variety of both biological temporal rhythms and reproductive cycles, the relevance of these analogies may be limited. 
+The rationale behind ScF is their analogy with circadian rhythms in certain bacteria. The intention is to mimic the highly regular cycles during which these organisms have enough time to reproduce repeatedly. LF, by contrast, are more similar to seasonal fluctuations, while SF resemble ecological crises. However, owing to the variety of both biological temporal rhythms and reproductive cycles, the relevance of these analogies remains rather limited.
 
 %\subsection{Common Settings}\label{sec:commonset}
-
-
