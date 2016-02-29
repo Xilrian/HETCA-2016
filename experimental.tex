@@ -1,11 +1,12 @@
 As in the previous version of HetCA \citep{medernach2013long}, the genotype of an individual consists of its transition rules encoded in a custom CA-LGP program using the function set listed in Table~\ref{funcSet}. Such a program maps the space of neighborhood states to a new cell state, while providing an evolvable representation framework based on an alphabet of elementary functions. Individual genotypes are modified by micro-mutations (change in one component of a statement) and macro-mutations (addition or removal of an entire statement) of the corresponding CA-LGP programs.
  
 \begin{table}
-\scriptsize
+\caption{Function set.\label{funcSet}}
+\footnotesize
 \centering
-  \begin{tabular}{l>{\centering}p{0.6\columnwidth}}
-  \toprule%
-    \textbf{op. name}	& \textbf{action} on inputs $(x,y)$\tabularnewline
+\begin{tabular}{l>{\centering}p{0.6\columnwidth}}
+\toprule%
+\textbf{operator}	& \textbf{action} on inputs $(x,y)$\tabularnewline
  \toprule%   
     abs			& $|x|$ \tabularnewline
     plus		& $x+y$ \tabularnewline
@@ -22,8 +23,7 @@ As in the previous version of HetCA \citep{medernach2013long}, the genotype of a
     times		& $xy$ \tabularnewline
     zero		& 1, if $|x| < 1/10,000$; 0 o.w. \tabularnewline
 \bottomrule%
-  \end{tabular}
-    \caption{\textbf{Function set}. \label{funcSet}}
+\end{tabular}
 \end{table}
 
 Previously, the new genotype of a living cell $c$ during genetic transfer was chosen randomly among candidate neighboring genotypes according to a uniform distribution. In the present study, to introduce environmental variations we vary the likelihood of propagation of a genotype according to its cell state $S_c$. In this new setup, the probability $P(c)$ of a candidate genotype to be selected becomes $P(c)=K(S_c)/\sum_{i=1}^{n} K(S_{c_i})$, where $K(S)$ the state distribution and $n$ the number of candidate genotypes. Therefore an environment $E$ is characterized by the propagation probabilities of the 5 living states: $E=\{K(S_1),...,K(S_5)\}$. To mimic environmental fluctuations we initialize the simulation with $K(S_i)=1$ everywhere, then regularly modify those values every $f$ iterations starting from iteration 3,000 of the CA. We introduce three types of environmental fluctuations (Table~\ref{tab:environments}):
@@ -37,13 +37,13 @@ Previously, the new genotype of a living cell $c$ during genetic transfer was ch
 \toprule%
 {\textbf{Name}} & {\textbf{Short Name}} & \textbf{Cycles}\tnote{a} & \textbf{Transitions}\tnote{b} &\textbf{Environment list: propagation probabilities $E = \{K(S_1),...,K(S_5)\}$ of the living types} \tabularnewline
 \toprule%
-\textbf{Stable Environment} & (SE) & NA & NA & \TitleParbox{$\{1,1,1,1,1\}$} \tabularnewline
+Stable Environment & (SE) & NA & NA & \TitleParbox{$\{1,1,1,1,1\}$} \tabularnewline
 
-\textbf{Short-cycle Fluctuations} & (ScF) & 100 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$} \tabularnewline
+Short-cycle Fluctuations & (ScF) & 100 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$} \tabularnewline
 
-\textbf{Light Fluctuations} & (LF) & 5,000 &  1 & \TitleParbox{$\{1,1,1,1,0\}$, $\{1,1,1,0,1\}$, $\{1,1,0,1,1\}$, $\{1,0,1,1,1\}$, $\{0,1,1,1,1\}$, $\{1,1,1,1,1\}$}\tabularnewline
+Light Fluctuations & (LF) & 5,000 &  1 & \TitleParbox{$\{1,1,1,1,0\}$, $\{1,1,1,0,1\}$, $\{1,1,0,1,1\}$, $\{1,0,1,1,1\}$, $\{0,1,1,1,1\}$, $\{1,1,1,1,1\}$}\tabularnewline
     
-\textbf{Strong Fluctuations} & (SF) & 5,000 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
+Strong Fluctuations & (SF) & 5,000 & 1 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
 
 %\textbf{Gradual Fluctuations} & (GF) & 5,000  & 60 & \TitleParbox{$\{0,0,1,1,1\}$, $\{1,1,1,0,0\}$, $\{0,1,0,1,1\}$, $\{1,0,1,1,0\}$, $\{0,1,1,0,1\}$, $\{1,1,0,1,0\}$, $\{1,0,1,0,1\}$, $\{0,1,1,1,0\}$, $\{1,0,0,1,1\}$, $\{1,1,0,0,1\}$, $\{1,1,1,1,1\}$} \tabularnewline
 
@@ -51,7 +51,7 @@ Previously, the new genotype of a living cell $c$ during genetic transfer was ch
 \end{tabular}%
 \end{table*} 
 
-\emph{Short-cycle fluctuations (ScF)} consist of alternating between two environments every $f$ iterations of the CA. We choose $f=100$ to remain within the range of frequency described by \citet{lipson2002origin} and \citet{yu2007program}. Here we consider that a successful reproductive cycle for a cell involves passing through the quiescent state. This should take between 2 iterations (alternating between quiescent and living) and 7 iterations (after which a living cell decays and can no longer receive a genotype for a long period of time).
+\emph{Short-cycle fluctuations (ScF)} consist of alternating between two rather different environments, $\{0,0,1,1,1\}$ and $\{1,1,1,0,0\}$, every $f$ iterations of the CA. We choose $f=100$ to remain within the range of frequency described by \citet{lipson2002origin} and \citet{yu2007program}. Here we consider that a successful reproductive cycle for a cell involves passing through the quiescent state. This should take between 2 iterations (alternating between quiescent and living) and 7 iterations (after which a living cell decays and can no longer receive a genotype for a long period of time).
 
 \emph{Light fluctuations (LF)} consist of alternating between 6 environments every $f=5,000$ iterations. The first 5 environments each prohibit a different living state (out 5 possible ones) from spreading its genotype; the last one gives an equal chance to all living states.
 

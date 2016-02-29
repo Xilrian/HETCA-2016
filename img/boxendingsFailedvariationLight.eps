@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
 %%Title: boxendingsFailedvariationLight.eps
 %%Creator: gnuplot 4.6 patchlevel 5
-%%CreationDate: Mon Feb 29 04:02:02 2016
+%%CreationDate: Mon Feb 29 17:25:16 2016
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 554 770
 %%Orientation: Landscape
@@ -422,6 +422,34 @@ Level1 {Level1PatternFill} {Level2PatternFill} ifelse
 /Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
 dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
 currentdict end definefont pop
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {Gshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
+     show 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
 Level1 SuppressPDFMark or 
 {} {
 /SDict 10 dict def
@@ -435,7 +463,7 @@ SDict begin [
   /Author (David)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Mon Feb 29 04:02:02 2016)
+  /CreationDate (Mon Feb 29 17:25:16 2016)
   /DOCINFO pdfmark
 end
 } ifelse
@@ -455,277 +483,345 @@ newpath
 BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
 1.000 UL
 LTb
-854 644 M
+518 644 M
 63 0 V
-6030 0 R
+6366 0 R
 -63 0 V
-770 644 M
-( 0) Rshow
+stroke
+434 644 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 0)]
+] -60.0 MRshow
 1.000 UL
 LTb
-854 1349 M
+518 1349 M
 63 0 V
-6030 0 R
+6366 0 R
 -63 0 V
--6114 0 R
-( 10000) Rshow
+stroke
+434 1349 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 1)]
+] -60.0 MRshow
 1.000 UL
 LTb
-854 2053 M
+518 2053 M
 63 0 V
-6030 0 R
+6366 0 R
 -63 0 V
--6114 0 R
-( 20000) Rshow
+stroke
+434 2053 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 2)]
+] -60.0 MRshow
 1.000 UL
 LTb
-854 2758 M
+518 2758 M
 63 0 V
-6030 0 R
+6366 0 R
 -63 0 V
--6114 0 R
-( 30000) Rshow
+stroke
+434 2758 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 3)]
+] -60.0 MRshow
 1.000 UL
 LTb
-854 3462 M
+518 3462 M
 63 0 V
-6030 0 R
+6366 0 R
 -63 0 V
--6114 0 R
-( 40000) Rshow
+stroke
+434 3462 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 4)]
+] -60.0 MRshow
 1.000 UL
 LTb
-854 4167 M
+518 4167 M
 63 0 V
-6030 0 R
+6366 0 R
 -63 0 V
--6114 0 R
-( 50000) Rshow
+stroke
+434 4167 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 5)]
+] -60.0 MRshow
 1.000 UL
 LTb
-854 4871 M
+518 4871 M
 63 0 V
-6030 0 R
+6366 0 R
 -63 0 V
--6114 0 R
-( 60000) Rshow
+stroke
+434 4871 M
+[ [(Helvetica) 180.0 0.0 true true 0 ( 6)]
+] -60.0 MRshow
 1.000 UL
 LTb
-1041 644 M
+715 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(2500) Rshow
+stroke
+715 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (2500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-1289 644 M
+977 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(102500) Rshow
+stroke
+977 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (102500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-1538 644 M
+1240 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(202500) Rshow
+stroke
+1240 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (202500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-1787 644 M
+1502 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(302500) Rshow
+stroke
+1502 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (302500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-2035 644 M
+1764 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(402500) Rshow
+stroke
+1764 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (402500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-2284 644 M
+2027 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(500000) Rshow
+stroke
+2027 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (500000)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-2533 644 M
+2289 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(2500) Rshow
+stroke
+2289 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (2500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-2781 644 M
+2552 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(102500) Rshow
+stroke
+2552 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (102500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-3030 644 M
+2814 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(202500) Rshow
+stroke
+2814 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (202500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-3279 644 M
+3076 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(302500) Rshow
+stroke
+3076 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (302500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-3527 644 M
+3339 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(402500) Rshow
+stroke
+3339 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (402500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-3776 644 M
+3601 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(500000) Rshow
+stroke
+3601 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (500000)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-4025 644 M
+3864 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(2500) Rshow
+stroke
+3864 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (2500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-4274 644 M
+4126 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(102500) Rshow
+stroke
+4126 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (102500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-4522 644 M
+4389 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(202500) Rshow
+stroke
+4389 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (202500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-4771 644 M
+4651 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(302500) Rshow
+stroke
+4651 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (302500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-5020 644 M
+4913 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(402500) Rshow
+stroke
+4913 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (402500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-5268 644 M
+5176 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(500000) Rshow
+stroke
+5176 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (500000)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-5517 644 M
+5438 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(2500) Rshow
+stroke
+5438 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (2500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-5766 644 M
+5701 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(102500) Rshow
+stroke
+5701 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (102500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-6014 644 M
+5963 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(202500) Rshow
+stroke
+5963 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (202500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-6263 644 M
+6225 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(302500) Rshow
+stroke
+6225 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (302500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-6512 644 M
+6488 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(402500) Rshow
+stroke
+6488 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (402500)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
-6760 644 M
+6750 644 M
 0 4227 R
-0 -4311 R
-currentpoint gsave translate -270 rotate 0 0 M
-(500000) Rshow
+stroke
+6750 560 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 180.0 0.0 true true 0 (500000)]
+] -60.0 MRshow
 grestore
 1.000 UL
 LTb
 1.000 UL
 LTb
-854 4871 M
-854 644 L
-6093 0 R
+518 4871 M
+518 644 L
+6429 0 R
 0 4227 R
--6093 0 R
+-6429 0 R
 stroke
 LCb setrgbcolor
 112 2757 M
-currentpoint gsave translate -270 rotate 0 0 M
-(Last Iteration) Cshow
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 220.0 0.0 true true 0 (Last Iteration n x 10)]
+[(Helvetica) 176.0 110.0 true true 0 (4)]
+] -95.3 MCshow
 grestore
 LTb
 0.500 UP
-0.00 0.80 0.00 C 1662 4871 M
-(SE) Lshow
-0.00 0.00 0.00 C 3154 4871 M
-(LF) Lshow
-0.00 0.00 1.00 C 4647 4871 M
-(SF) Lshow
-1.00 0.00 0.00 C 6139 4871 M
-(ScF) Lshow
+0.00 0.80 0.00 C 1371 4871 M
+[ [(Helvetica) 140.0 0.0 true true 0 (SE)]
+] -46.7 MLshow
+0.00 0.00 0.00 C 2945 4871 M
+[ [(Helvetica) 140.0 0.0 true true 0 (LF)]
+] -46.7 MLshow
+0.00 0.00 1.00 C 4520 4871 M
+[ [(Helvetica) 140.0 0.0 true true 0 (SF)]
+] -46.7 MLshow
+1.00 0.00 0.00 C 6094 4871 M
+[ [(Helvetica) 140.0 0.0 true true 0 (ScF)]
+] -46.7 MLshow
 1.000 UL
 LTb
 % Begin plot #1
@@ -734,224 +830,224 @@ LTb
 LT0
 0.00 0.80 0.00 C /Helvetica findfont 140 scalefont setfont
 /vshift -46 def
-0.250 978 1356 126 717 BoxColFill
-1041 645 M
+0.250 649 1356 132 717 BoxColFill
+715 645 M
 0 711 V
 0 717 R
 0 363 V
 stroke
-978 1356 N
-126 0 V
+649 1356 N
+132 0 V
 0 717 V
--126 0 V
+-132 0 V
 0 -717 V
 Z stroke
-978 2436 M
+652 2436 M
 126 0 V
-978 645 M
+652 645 M
 126 0 V
-978 1712 M
-126 0 V
+649 1712 M
+132 0 V
 % End plot #1
 % Begin plot #2
 0.500 UP
 stroke
 LT0
 0.00 0.80 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 1227 1702 124 368 BoxColFill
-1289 1207 M
+0.250 912 1702 132 368 BoxColFill
+978 1207 M
 0 495 V
 0 368 R
 0 520 V
 stroke
-1227 1702 N
-124 0 V
+912 1702 N
+132 0 V
 0 368 V
--124 0 V
+-132 0 V
 0 -368 V
 Z stroke
-1226 2590 M
+915 2590 M
 126 0 V
-1226 1207 M
+915 1207 M
 126 0 V
--125 598 R
-124 0 V
-1289 996 Pls
-1289 998 Pls
-1289 1056 Pls
+912 1805 M
+132 0 V
+977 996 Pls
+977 998 Pls
+977 1056 Pls
 % End plot #2
 % Begin plot #3
 0.500 UP
 3.000 UL
 LT0
 0.00 0.80 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 1476 1736 124 438 BoxColFill
-1538 1209 M
+0.250 1174 1736 132 438 BoxColFill
+1240 1209 M
 0 527 V
 0 438 R
 0 391 V
 stroke
-1476 1736 N
-124 0 V
+1174 1736 N
+132 0 V
 0 438 V
--124 0 V
+-132 0 V
 0 -438 V
 Z stroke
-1475 2565 M
+1177 2565 M
 126 0 V
-1475 1209 M
+1177 1209 M
 126 0 V
--125 757 R
-124 0 V
-1538 1036 Pls
+-129 757 R
+132 0 V
+1240 1036 Pls
 % End plot #3
 % Begin plot #4
 0.500 UP
 3.000 UL
 LT0
 0.00 0.80 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 1724 1751 126 655 BoxColFill
-1787 996 M
+0.250 1436 1751 132 655 BoxColFill
+1502 996 M
 0 755 V
 0 655 R
 0 29 V
 stroke
-1724 1751 N
-126 0 V
+1436 1751 N
+132 0 V
 0 655 V
--126 0 V
+-132 0 V
 0 -655 V
 Z stroke
-1724 2435 M
+1439 2435 M
 126 0 V
-1724 996 M
+1439 996 M
 126 0 V
-1724 2019 M
-126 0 V
-1787 4138 Pls
-1787 4738 Pls
+1436 2019 M
+132 0 V
+1502 4138 Pls
+1502 4738 Pls
 % End plot #4
 % Begin plot #5
 0.500 UP
 3.000 UL
 LT0
 0.00 0.80 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 1973 1701 124 511 BoxColFill
-2035 996 M
+0.250 1699 1701 132 511 BoxColFill
+1765 996 M
 0 705 V
 0 511 R
 0 323 V
 stroke
-1973 1701 N
-124 0 V
+1699 1701 N
+132 0 V
 0 511 V
--124 0 V
+-132 0 V
 0 -511 V
 Z stroke
-1972 2535 M
+1702 2535 M
 126 0 V
-1972 996 M
+1702 996 M
 126 0 V
--125 763 R
-124 0 V
+-129 763 R
+132 0 V
 % End plot #5
 % Begin plot #6
 0.500 UP
 stroke
 LT0
 0.00 0.80 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 2222 1703 124 467 BoxColFill
-2284 1348 M
+0.250 1961 1703 132 467 BoxColFill
+2027 1348 M
 0 355 V
 0 467 R
 0 242 V
 stroke
-2222 1703 N
-124 0 V
+1961 1703 N
+132 0 V
 0 467 V
--124 0 V
+-132 0 V
 0 -467 V
 Z stroke
-2221 2412 M
+1964 2412 M
 126 0 V
-2221 1348 M
+1964 1348 M
 126 0 V
--125 429 R
-124 0 V
-2284 996 Pls
-2284 998 Pls
-2284 3862 Pls
-2284 3969 Pls
+-129 429 R
+132 0 V
+2027 996 Pls
+2027 998 Pls
+2027 3862 Pls
+2027 3969 Pls
 % End plot #6
 % Begin plot #7
 0.500 UP
 3.000 UL
 LT0
 0.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 2471 1348 124 373 BoxColFill
-2533 998 M
+0.250 2224 1348 132 373 BoxColFill
+2290 998 M
 0 350 V
 0 373 R
 0 368 V
 stroke
-2471 1348 N
-124 0 V
+2224 1348 N
+132 0 V
 0 373 V
--124 0 V
+-132 0 V
 0 -373 V
 Z stroke
-2470 2089 M
+2227 2089 M
 126 0 V
-2470 998 M
+2227 998 M
 126 0 V
--125 703 R
-124 0 V
-2533 645 Pls
-2533 645 Pls
-2533 647 Pls
-2533 2405 Pls
-2533 2410 Pls
-2533 2425 Pls
-2533 2426 Pls
+-129 703 R
+132 0 V
+2289 645 Pls
+2289 645 Pls
+2289 647 Pls
+2289 2405 Pls
+2289 2410 Pls
+2289 2425 Pls
+2289 2426 Pls
 % End plot #7
 % Begin plot #8
 0.500 UP
 3.000 UL
 LT0
 0.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 2719 1720 126 363 BoxColFill
-2782 1703 M
+0.250 2486 1720 132 363 BoxColFill
+2552 1703 M
 0 17 V
 0 363 R
 0 343 V
 stroke
-2719 1720 N
-126 0 V
+2486 1720 N
+132 0 V
 0 363 V
--126 0 V
+-132 0 V
 0 -363 V
 Z stroke
-2719 2426 M
+2489 2426 M
 126 0 V
-2719 1703 M
+2489 1703 M
 126 0 V
--126 176 R
-126 0 V
+-129 176 R
+132 0 V
 % End plot #8
 % Begin plot #9
 0.500 UP
 stroke
 LT0
 0.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-3030 997 Pls
-3030 1351 Pls
+2814 997 Pls
+2814 1351 Pls
 % End plot #9
 % Begin plot #10
 0.500 UP
 3.000 UL
 LT0
 0.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-3279 996 Pls
+3076 996 Pls
 % End plot #10
 % Begin plot #11
 0.500 UP
@@ -963,78 +1059,78 @@ LT0
 3.000 UL
 LT0
 0.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-3776 997 Pls
+3601 997 Pls
 % End plot #12
 % Begin plot #13
 0.500 UP
 3.000 UL
 LT0
 0.00 0.00 1.00 C /Helvetica findfont 140 scalefont setfont
-0.250 3963 1369 124 704 BoxColFill
-4025 645 M
+0.250 3798 1369 132 704 BoxColFill
+3864 645 M
 0 724 V
 0 704 R
 0 401 V
 stroke
-3963 1369 N
-124 0 V
+3798 1369 N
+132 0 V
 0 704 V
--124 0 V
+-132 0 V
 0 -704 V
 Z stroke
-3962 2474 M
+3801 2474 M
 126 0 V
-3962 645 M
+3801 645 M
 126 0 V
-3963 1713 M
-124 0 V
+3798 1713 M
+132 0 V
 % End plot #13
 % Begin plot #14
 0.500 UP
 stroke
 LT0
 0.00 0.00 1.00 C /Helvetica findfont 140 scalefont setfont
-0.250 4211 1731 126 322 BoxColFill
-4274 1369 M
+0.250 4061 1731 132 322 BoxColFill
+4127 1369 M
 0 362 V
 0 322 R
 0 406 V
 stroke
-4211 1731 N
-126 0 V
+4061 1731 N
+132 0 V
 0 322 V
--126 0 V
+-132 0 V
 0 -322 V
 Z stroke
-4211 2459 M
+4064 2459 M
 126 0 V
-4211 1369 M
+4064 1369 M
 126 0 V
--126 394 R
-126 0 V
+-129 394 R
+132 0 V
 % End plot #14
 % Begin plot #15
 0.500 UP
 stroke
 LT0
 0.00 0.00 1.00 C /Helvetica findfont 140 scalefont setfont
-4522 2405 Pls
+4389 2405 Pls
 % End plot #15
 % Begin plot #16
 0.500 UP
 3.000 UL
 LT0
 0.00 0.00 1.00 C /Helvetica findfont 140 scalefont setfont
-4771 2406 Pls
-4771 2529 Pls
+4651 2406 Pls
+4651 2529 Pls
 % End plot #16
 % Begin plot #17
 0.500 UP
 3.000 UL
 LT0
 0.00 0.00 1.00 C /Helvetica findfont 140 scalefont setfont
-5020 997 Pls
-5020 1354 Pls
+4913 997 Pls
+4913 1354 Pls
 % End plot #17
 % Begin plot #18
 0.500 UP
@@ -1046,218 +1142,218 @@ LT0
 3.000 UL
 LT0
 1.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 5455 1701 124 353 BoxColFill
-5517 1349 M
+0.250 5373 1701 132 353 BoxColFill
+5439 1349 M
 0 352 V
 0 353 R
 0 368 V
 stroke
-5455 1701 N
-124 0 V
+5373 1701 N
+132 0 V
 0 353 V
--124 0 V
+-132 0 V
 0 -353 V
 Z stroke
-5454 2422 M
+5376 2422 M
 126 0 V
-5454 1349 M
+5376 1349 M
 126 0 V
--125 360 R
-124 0 V
-5517 649 Pls
-5517 996 Pls
-5517 998 Pls
-5517 999 Pls
+-129 360 R
+132 0 V
+5438 649 Pls
+5438 996 Pls
+5438 998 Pls
+5438 999 Pls
 % End plot #19
 % Begin plot #20
 0.500 UP
 3.000 UL
 LT0
 1.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 5704 2405 124 1 BoxColFill
-5766 2405 M
+0.250 5635 2405 132 1 BoxColFill
+5701 2405 M
 0 1 R
 0 1 V
 stroke
-5704 2405 N
-124 0 V
+5635 2405 N
+132 0 V
 0 1 V
--124 0 V
+-132 0 V
 0 -1 V
 Z stroke
-5703 2407 M
+5638 2407 M
 126 0 V
 -126 -2 R
 126 0 V
--125 0 R
-124 0 V
-5766 645 Pls
-5640 645 Pls
-5766 645 Pls
-5766 645 Pls
-5640 645 Pls
-5892 645 Pls
-5766 2407 Pls
-5766 2407 Pls
-5766 2450 Pls
-5766 2460 Pls
-5766 2541 Pls
-5766 4786 Pls
+-129 0 R
+132 0 V
+5701 645 Pls
+5575 645 Pls
+5701 645 Pls
+5701 645 Pls
+5575 645 Pls
+5827 645 Pls
+5701 2407 Pls
+5701 2407 Pls
+5701 2450 Pls
+5701 2460 Pls
+5701 2541 Pls
+5701 4786 Pls
 % End plot #20
 % Begin plot #21
 0.500 UP
 3.000 UL
 LT0
 1.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 5952 2405 126 1 BoxColFill
-6015 2405 M
+0.250 5897 2405 132 1 BoxColFill
+5963 2405 M
 0 1 R
 0 1 V
 stroke
-5952 2405 N
-126 0 V
+5897 2405 N
+132 0 V
 0 1 V
--126 0 V
+-132 0 V
 0 -1 V
 Z stroke
-5952 2407 M
+5900 2407 M
 126 0 V
 -126 -2 R
 126 0 V
--126 0 R
-126 0 V
-6014 645 Pls
-5888 645 Pls
-6140 645 Pls
-5762 645 Pls
-6014 645 Pls
-5888 645 Pls
-6014 2408 Pls
-6014 2443 Pls
-6014 2458 Pls
-6014 2508 Pls
-6014 2508 Pls
-6014 2525 Pls
-6014 2552 Pls
-6014 2574 Pls
+-129 0 R
+132 0 V
+5963 645 Pls
+5837 645 Pls
+6089 645 Pls
+5711 645 Pls
+5963 645 Pls
+5837 645 Pls
+5963 2408 Pls
+5963 2443 Pls
+5963 2458 Pls
+5963 2508 Pls
+5963 2508 Pls
+5963 2525 Pls
+5963 2552 Pls
+5963 2574 Pls
 % End plot #21
 % Begin plot #22
 0.500 UP
 3.000 UL
 LT0
 1.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 6201 2405 124 1 BoxColFill
-6263 2405 M
+0.250 6160 2405 132 1 BoxColFill
+6226 2405 M
 0 1 R
 stroke
-6201 2405 N
-124 0 V
+6160 2405 N
+132 0 V
 0 1 V
--124 0 V
+-132 0 V
 0 -1 V
 Z stroke
-6200 2406 M
+6163 2406 M
 126 0 V
 -126 -1 R
 126 0 V
--125 0 R
-124 0 V
-6263 645 Pls
-6137 645 Pls
-6389 645 Pls
-6011 645 Pls
-6515 645 Pls
-6263 645 Pls
-6263 2408 Pls
-6137 2408 Pls
-6263 2415 Pls
-6263 2448 Pls
-6263 2454 Pls
-6263 2502 Pls
-6263 2517 Pls
-6263 2573 Pls
-6263 2581 Pls
+-129 0 R
+132 0 V
+6225 645 Pls
+6099 645 Pls
+6351 645 Pls
+5973 645 Pls
+6477 645 Pls
+6225 645 Pls
+6225 2408 Pls
+6099 2408 Pls
+6225 2415 Pls
+6225 2448 Pls
+6225 2454 Pls
+6225 2502 Pls
+6225 2517 Pls
+6225 2573 Pls
+6225 2581 Pls
 % End plot #22
 % Begin plot #23
 0.500 UP
 3.000 UL
 LT0
 1.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 6450 2405 124 2 BoxColFill
-6512 2405 M
+0.250 6422 2405 132 2 BoxColFill
+6488 2405 M
 0 2 R
 stroke
-6450 2405 N
-124 0 V
+6422 2405 N
+132 0 V
 0 2 V
--124 0 V
+-132 0 V
 0 -2 V
 Z stroke
-6449 2407 M
+6425 2407 M
 126 0 V
 -126 -2 R
 126 0 V
--125 0 R
-124 0 V
-6512 645 Pls
-6386 645 Pls
-6638 645 Pls
-6260 645 Pls
-6512 645 Pls
-6386 645 Pls
-6512 2412 Pls
-6512 2414 Pls
-6512 2479 Pls
-6512 2483 Pls
-6512 2511 Pls
-6512 2525 Pls
-6512 2538 Pls
-6512 2589 Pls
-6512 2652 Pls
+-129 0 R
+132 0 V
+6488 645 Pls
+6362 645 Pls
+6614 645 Pls
+6236 645 Pls
+6488 645 Pls
+6362 645 Pls
+6488 2412 Pls
+6488 2414 Pls
+6488 2479 Pls
+6488 2483 Pls
+6488 2511 Pls
+6488 2525 Pls
+6488 2538 Pls
+6488 2589 Pls
+6488 2652 Pls
 % End plot #23
 % Begin plot #24
 0.500 UP
 3.000 UL
 LT0
 1.00 0.00 0.00 C /Helvetica findfont 140 scalefont setfont
-0.250 6698 2405 126 1 BoxColFill
-6761 2405 M
+0.250 6685 2405 132 1 BoxColFill
+6751 2405 M
 0 1 R
 0 1 V
 stroke
-6698 2405 N
-126 0 V
+6685 2405 N
+132 0 V
 0 1 V
--126 0 V
+-132 0 V
 0 -1 V
 Z stroke
-6698 2407 M
+6688 2407 M
 126 0 V
 -126 -2 R
 126 0 V
--126 0 R
-126 0 V
-6760 645 Pls
-6760 645 Pls
-6634 645 Pls
-6760 645 Pls
-6634 645 Pls
-6760 645 Pls
-6760 2412 Pls
-6760 2418 Pls
-6760 2491 Pls
-6760 2518 Pls
-6760 2537 Pls
-6760 2585 Pls
-6760 2590 Pls
+-129 0 R
+132 0 V
+6750 645 Pls
+6750 645 Pls
+6624 645 Pls
+6750 645 Pls
+6624 645 Pls
+6750 645 Pls
+6750 2412 Pls
+6750 2418 Pls
+6750 2491 Pls
+6750 2518 Pls
+6750 2537 Pls
+6750 2585 Pls
+6750 2590 Pls
 % End plot #24
 1.000 UL
 LTb
-854 4871 M
-854 644 L
-6093 0 R
+518 4871 M
+518 644 L
+6429 0 R
 0 4227 R
--6093 0 R
+-6429 0 R
 0.500 UP
 stroke
 grestore

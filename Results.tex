@@ -1,113 +1,71 @@
-\subsection{Genotype Size \& Genotype mutations}
+\subsection{Genotype Size and Genotype Mutations}
 
-Figure~\ref{fig:Size} shows genotype size under the various studied fluctuations. The size is bounded (50 is the maximum size) and this limits differences between those environments as most simulations converge towards this limit, however, one can clearly see here that ScF restrict the size of the genotypes while other forms of fluctuations do not appear to have any effect on genotype size. This size reduction could be a way to increase the impact of genotypic mutations on the phenotype. Indeed even if in LGP, when a mutation occurs its effect is proportional to the size of the genotype, long genotype may enable redundancy information to stabilize the phenotype. Figure~\ref{fig:Size} depicts the amount of mutations separating the current most common individual from individuals created at initialization of the simulation. It is not surprising that more mutations are selected when there are environmental fluctuations\footnote{And those seem to depend more on the strength of these fluctuations than on their periodicity.}, we note that the proximity of strong fluctuations and Short Cycle fluctuations indicates that their size differences is not explained by differences in the number of selected mutations.
+Figure~\ref{fig:Size} shows the evolution of genotype size under the 4 types of environmental fluctuations. The imposed size limit of 50 program statements tends to blur the differences between the different scenarios since most simulations converge to this limit. Yet, ScF clearly restricts the size of the genotypes more severely than SE, LF and SF, while these other conditions do not appear to influence genotype size. This size reduction by ScF could be a way to increase the impact of genotypic mutations on the phenotype. This is because, even though the number of statements potentially affected by mutations in LGP increases proportionally with genotype size, hence could have a larger effect on the phenotype, there can also be a ``buffer'' effect brought by information redundancy in longer genotypes, which would in fact stabilize the phenotype. Hence, mutations in more compact genomes might end up being more impactful.
+
+Figure~\ref{fig:Mutations} depicts the amount of mutations separating the current MCG from individuals created during initialization. It is not surprising that more mutations are selected for when environmental fluctuations are introduced, and their number seem to depend more on the strength of these fluctuations (i.e. the contrast between two successive propagation probability patterns $E$) rather than their periodicity. We also note that the proximity of SF and ScF indicates that their differences in size are not explained by differences in the number of selected mutations.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/Size}
-\caption{\textbf{Size of genotypes}. 
-}
+\includegraphics[width=0.7\columnwidth, angle=-90]{img/Size}
+\caption{Size of genotypes in number of LGP statements.}
 \label{fig:Size}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/Mutations}
-\caption{\textbf{Mutations of genotypes}.
-}
+\includegraphics[width=0.7\columnwidth, angle=-90]{img/Mutations}
+\caption{Genotype mutations from initialization to MCG.}
 \label{fig:Mutations}
 \end{figure}
 
 \subsection{Phenotypic Comparison}
-Figure~\ref{fig:disimilar} depict phenotypic comparison of disimilar environment, one can see that the impact of environmental fluctuations decreases quickly for ScF while it remains very high for other forms of environmental fluctuations. We also noted that the phenotypic difference of ScF remains most of the time under the phenotypic differences of the SE. This suggests a selection of a single phenotype, robust in both environments. Figure~\ref{fig:similar} depict phenotypic comparison of similar environment, it can be observed that, for LF and SF, phenotypic differences are much lower than in Figure~\ref{fig:disimilar}, in particular, for LF they are, most of the time, not significantly different from SE. The fact that the phenotypic changes induced by environmental fluctuations can be undone by a return to the original environment suggests either plasticity or a strong evolutionary convergence.
+
+Figure~\ref{fig:dissimilar} shows the phenotypic comparison $\sigma(t_1, t_2)$ between dissimilar environments, i.e.~at $t_1$ and $t_2 = t_1 - \Delta t$ such that $E(t_1) = E(t_2 + f)$. On can see that the impact of environmental fluctuations decreases quickly for ScF while it remains very high for other types of environmental fluctuations. We also note that the phenotypic difference of ScF remains most of the time lower than the phenotypic differences of the SE. This suggests the selection of a single phenotype, robust in both environments. Figure~\ref{fig:similar} shows $\sigma$ between similar environment, i.e. such that $E(t_1) = E(t_2)$. It can be observed that phenotypic differences in LF and SF are much lower than they are in Figure~\ref{fig:dissimilar}. In particular they are not significantly different for LF compared to SE. The fact that the phenotypic changes induced by environmental fluctuations can be undone by a return to the original environment suggests either plasticity or a strong evolutionary convergence.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/diffProp}
-\caption{\textbf{phenotypic comparison of disimilar environments}.}
-\label{fig:disimilar}
+\includegraphics[width=0.7\columnwidth, angle=-90]{img/diffProp}
+\caption{Phenotypic comparison: dissimilar environments.}
+\label{fig:dissimilar}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/ProgressProp}
-\caption{\textbf{phenotypic comparison of similar environments}.}
+\includegraphics[width=0.7\columnwidth, angle=-90]{img/ProgressProp}
+\caption{Phenotypic comparison $\sigma$: similar environments.}
 \label{fig:similar}
 \end{figure}
 
-
-
-
 \subsection{Phenotypic and Genotypic Diversity}
-Figure \ref{fig:phenodiv} and \ref{fig:genodiv} depict the average phenotypic and genotypic diversities. The low phenotypic diversity of ScF, suggests the existence in this configuration of a dominant phenotype rather stable over time. While the relatively high phenotypic diversity of LF and SF combine with a relatively low genotypic diversity might suggest the existence strong phenotypic selection and therefore some form of plasticity.
 
-
+Figures~\ref{fig:phenodiv} and~\ref{fig:genodiv} depict the average phenotypic and genotypic diversities, $^2\!D_p$ and $^2\!D_g$. The generally low phenotypic diversity of ScF suggests the existence in this configuration of a dominant phenotype, which remains rather stable over time, whereas the relatively high phenotypic diversity of LF and SF combined with a relatively low genotypic diversity might suggest the existence of strong phenotypic selection, hence some form of plasticity.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/PhenoDiv}
-\caption{\textbf{Phenotypic diversity}.}
+\includegraphics[width=0.7\columnwidth, angle=-90]{img/PhenoDiv}
+\caption{Phenotypic diversity.}
 \label{fig:phenodiv}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.7\columnwidth, angle =-90 ]{img/GenoDiv}
-\caption{\textbf{Genotypic diversity}.}
-\label{fig:genodiv}
-\end{figure}
+\subsection{Success Rates of the Homogeneous Test}
 
-\subsection{Success Rate of Homogenous Test}
-Success rates of genotypes in different homogenous simulations are reported in Figure \ref{fig:survrate} using normal approximation interval with a confidence of 95\%. Looking at the different success rates we can first order the different tested environment by increasing difficulty : SE; ScF; LF ; SF. The fact that the SE offers the lowest challenge is not surprising. Similarly the fact that LF are less difficult than SF is quite expected. We believe that the slightest difficulty in ScF than in LF is due to the reduced number of different environment in ScF and, in particular, to the fact that cells at the living state 3 are allowed to spread their genotype in all environments used in this configuration, i.e. $K(S_3)=1\forall E$. It is also noteworthy that individuals from LF and SF seem relatively robust in various environmental configurations while those from ScF doesn't seem robust outside environmental conditions in which they evolved. Moreover, among genotypes collected from iteration 102500, these same individuals are the only ones that do not reach a 100\% survival ratio in a stable environment.
-
-
-\begin{figure*}[h]
-\centering
-\includegraphics[width=2\columnwidth]{img/testSurvivingRates}
-\caption{\textbf{Success Rate of genotypes in Homogenous Tests}.}
-\label{fig:survrate}
-\end{figure*}
+Success rates of genotypes in different homogeneous simulations are reported in Figure \ref{fig:survrate} using a normal approximation with a 95\% confidence interval. The fact that SE offers the lowest challenge is not surprising. Similarly the fact that SF is the least conducive to success is also expected. A comparison of the levels of difficulty between LF and ScF is less clear, however, since ScF performs significantly better in its own settings while on the contrary all other tested fluctuations are slightly more efficient in LF. It is also noteworthy that individuals from LF and SF seem relatively robust in various environmental configurations, while those from ScF seem fragile outside the environmental conditions in which they evolved. Moreover, among genotypes collected from iteration 102,500, these same individuals are the only ones that do not reach a 100\% survival ratio in a stable environment.
 
 \subsection{Ending Iteration}
 
-Figure \ref{fig:ending} depict the last iteration with living cells of homogenous runs that didn't reach 60000. Note that ScF genotypes failures are concentrated around iteration 15000 on LF homogenous test and around iteration 25000 on SF homogenous test. This corresponds, for these two configurations, to the first environment for which $K(S_3)=0$, while $K(S_3)=1 \forall E$ in ScF. But we also see that some of the genotypes from ScF fail during the early iterations of Homogenous test regardless of the used configurations including SE and ScF.
+Figure~\ref{fig:ending} displays the last iterations reached by living cells of homogeneous runs that died out before 60,000 iterations. Note that ScF genotypes failures are concentrated around iteration 15,000 in LF homogeneous tests and 25,000 in SF homogeneous tests. This corresponds for these two configurations to the first environment for which $K(S_3) = 0$, whereas $K(S_3) = 1$ for all distributions $E$ in ScF. But we also see that some of the genotypes from ScF fail during the early iterations of the homogeneous test regardless of the environmental fluctuations, including SE and ScF.
 
-This might imply that the ecosystem resulting from the evolutionary history of individuals plays an key role in their ability to survive in ScF. This failure reminds the impossibility of saving species by the unique preservation of their DNA mentioned in \cite{jablonka2014evolution}: \say{You would have to reconstruct the community, and often these communities are very old, with historical memories that are stored in their epigenetic and behavioral systems. These are part of their “identity,” part of their stability. You cannot freeze these memories: they have to be maintained and transmitted through use, so you cannot reconstruct the communities from their component parts.}\emph{(ibid. p. 363)}.
+This might imply that the ecosystem resulting from the evolutionary history of the individuals plays a key role in their ability to survive in ScF. This failure is reminiscent of the impossibility of saving species by the unique preservation of their DNA mentioned in \cite{jablonka2014evolution}: \say{You would have to reconstruct the community, and often these communities are very old, with historical memories that are stored in their epigenetic and behavioral systems. These are part of their ``identity,'' part of their stability. You cannot freeze these memories: they have to be maintained and transmitted through use, so you cannot reconstruct the communities from their component parts.} (\emph{ibid.},~p.~363).
 
-\begin{figure}[H]
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedstable.eps}
-  \caption{SE}
-  \label{fig:sfig1}
-\end{subfigure}%
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariation.eps}
-  \caption{SF}
-  \label{fig:sfig2}
-\end{subfigure}
-
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariationLight.eps}
-  \caption{LF}
-  \label{fig:sfig2}
-\end{subfigure}%
-\begin{subfigure}{.25\textwidth}
-  \centering
-  \includegraphics[width=.7\linewidth, angle =-90]{img/boxendingsFailedvariationSmall.eps}
-  \caption{ScF}
-  \label{fig:sfig1}
-\end{subfigure}
-\caption{\textbf{Last iteration with living cells} of homogenous runs that didn't reach 60000 iterations.}
-\label{fig:ending}
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.7\columnwidth, angle=-90]{img/GenoDiv}
+\caption{Genotypic diversity.}
+\label{fig:genodiv}
 \end{figure}
 
-
-
 %\subsection{Phenotypic Densities}
-%Figure \ref{fig:density} depict the density of phenotypes as measured in homogeneous tests. 
+%Figure~\ref{fig:density} depict the density of phenotypes as measured in homogeneous tests. 
 
 %\begin{figure}[H]
 %\begin{subfigure}{.25\textwidth}
@@ -138,5 +96,3 @@ This might imply that the ecosystem resulting from the evolutionary history of i
 %\caption{Density of Genotype : Each genotype density is processed in four possible different environments.}
 %\label{fig:density}
 %\end{figure}
-
-
