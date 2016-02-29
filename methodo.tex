@@ -1,4 +1,4 @@
-For each one of the three types of environmental fluctuations and the stable (non-fluctuating) environment (SE) we performed 50 simulations. This produced a total of $4\times50=200$ runs. \hl{\textit{[[explain a little more the initialization]]}} Each run lasted 500,000 iterations under the parameters listed in Table~\ref{settings}.
+For each one of the three types of environmental fluctuations and the stable (non-fluctuating) environment (SE) we performed 50 simulations. This produced a total of $4\times50=200$ runs. On the first iteration of a simulation, each cell of the CA is initialized to random state; each living cells is also initialized with a randomly generated genotype. Each run lasted 500,000 iterations under the parameters listed in Table~\ref{settings}.
 
 \begin{table}
 \caption{HetCA parameters.}
@@ -35,7 +35,7 @@ where $N(S,t)$ is the number of cells in living state $S$ at iteration $t$ and $
 Every 5,000 iterations of the CA we performed two phenotypic comparisons between the current iteration $t_1 = t$ and an iteration in the past, $t_2 = t - \Delta t$. In one scenario, the temporal distance $\Delta t$ was a multiple of the total periodicity $f$, so that we compared two similar environments: $E(t_1) = E(t_2)$. We chose $\Delta t =$ 60,000 in the SE, ScF and LF cases and 55,000 in the SF case. In another scenario, we introduced an additional single-period shift such that we compared two dissimilar environments: $E(t_1) = E(t_2 + f)$. Here $\Delta t$ was respectively equal to 60,100, 65,000 and 60,000 in the ScF, LF and SF cases.
 
 \subsection{Diversity}
-We use the ``true diversity index'' of order two \hl{(ref?)} to measure phenotypic and genotypic diversity at every iteration $t$ of the CA. Phenotypic diversity therefore reads:
+We use the ``true diversity index'' of order two \citep{jost2006entropy} to measure phenotypic and genotypic diversity at every iteration $t$ of the CA. Phenotypic diversity therefore reads:
 %
 $$^2\!D_p(t)=\left(\sum_{S=1}^5 \left(\frac{N(S,t)}{N(t)}\right)^2\right)^{-1}$$
 %
