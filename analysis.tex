@@ -71,39 +71,30 @@ The phenotypic diversity measured in Figure~\ref{fig:phenodiv} can also be obser
 \label{fig:trans}
 \end{figure}
 
+
 \begin{figure}
-\begin{subfigure}{.23\textwidth}
- \centering
- \includegraphics[width=.9\linewidth]{img/stable495000}
- \caption{SE}
-\end{subfigure}%
-\begin{subfigure}{.23\textwidth}
- \centering
- \includegraphics[width=.9\linewidth]{img/var495000}
- \caption{SF}
-\end{subfigure}
-\begin{subfigure}{.23\textwidth}
- \centering
- \includegraphics[width=.9\linewidth]{img/light495000}
- \caption{LF}
-\end{subfigure}%
-\begin{subfigure}{.23\textwidth}
- \centering
- \includegraphics[width=.9\linewidth]{img/small495000}
- \caption{ScF}
-\end{subfigure}
+	\begin{tabular}{cc}
+		\includegraphics[width=.23\textwidth]{img/stable495000}&
+		\includegraphics[width=.23\textwidth]{img/var495000}\\
+		SE&
+		SF\\
+		\includegraphics[width=.23\textwidth]{img/light495000}&
+		\includegraphics[width=.23\textwidth]{img/small495000}\\
+		LF&
+		ScF
+	\end{tabular}
 \caption{Screenshots of the CA. Grid state distribution (phenotype) at iteration 495,000 for the four different configurations. Each cell state is represented by a different color. Black and grey represent cells in the \emph{decay} and \emph{quiescent} states, respectively. Shades of blue, red and purple represent the living states.}
 \label{fig:phenoexpl}
 \end{figure}
 
 \begin{figure}
-	\begin{tabular}{llll}
-		\includegraphics[width=.1\textwidth]{img/sm100000}&
-		\includegraphics[width=.1\textwidth]{img/sm200000}&
-		\includegraphics[width=.1\textwidth]{img/sm400000}&
-		\includegraphics[width=.1\textwidth]{img/sm500000}\\
+	\begin{tabular}{cc}
+		\includegraphics[width=.23\textwidth]{img/sm100000}&
+		\includegraphics[width=.23\textwidth]{img/sm200000}\\
 		$t=100,000$&
-		$t=200,000$&
+		$t=200,000$\\
+		\includegraphics[width=.23\textwidth]{img/sm400000}&
+		\includegraphics[width=.23\textwidth]{img/sm500000}\\
 		$t=400,000$&
 		$t=500,000$
 	\end{tabular}
