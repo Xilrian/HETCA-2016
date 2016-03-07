@@ -77,3 +77,5 @@ sig-alternate-sample.synctex.gz
 HetCA-Alife.pdf
 
 *.pdf
+
+.RData
