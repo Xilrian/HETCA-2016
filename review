@@ -4,7 +4,6 @@ Review 4
 
 
 
-
 The authors seek to show that their system and experimental conditions conform with the model of plasticity set out in Jablonka et al. (2014). Specifically, Jablonka contends that changing environments create pressures that would select for phenotypic plasticity. Crucially, the authors make an assumption that their new measure of phenotypic proximity (\sigma(t_1,t_2)) relates to plasticity. Specifically, “If environmental changes lead to selection of plasticity… then phenotypes from different individuals of the same lineage observed while environmental conditions are similar should be relatively close [as measured by \sigma] even though individuals from their lineage evolved [through] other environmental conditions between these measure[ment]s.” Little effort is made to validate \sigma, and little evidence is presented that phenotypic proximity is a valid measure of plasticity or epigenetic adaptation. Either work validating \sigma should be presented (possibly by objectively measuring plasticity of a genotype in different environments and relating this measure to \sigma), or this claim should be removed.
 
 Other Specific Concerns:
