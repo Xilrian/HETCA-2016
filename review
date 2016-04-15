@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Reviews
+Review 4
+Overall evaluation: 	
+1: (weak accept)
+Reviewer's confidence: 	
+4: (high)
+Presentation: 	
+3: (poster)
+Review
+Review: 	Summary of Paper
+
+The authors describe a series of experiments involving heterogeneous cellular automata under changing selective pressures. They subject initially random populations of heterogeneous cells to four different fluctuating environmental conditions. The first condition is a control, where the selective pressures are fixed and constant. The second condition switches back and forth between two different, but related selective conditions over a relatively quick cycle (100 iterations), which is close to that of the reproductive cycle length. The third and fourth conditions have a much extended cycle length (5000 iterations). The third condition cycles over 5 different selective pressures (light fluctuation), while the fourth cycles over 10 different selective pressures (heavy fluctuation). The authors measure average genotype length, phenotypic proximity of a population at different time-points, phenotypic diversity of the population, and the number of mutational steps from the ancestor to the dominant (most common) genotype. They also measured the survivability of the dominant genotypes in homogenous environments without mutation. The authors conclude in their analysis that changing environments in their system produce plasticity, phenotypic diversity, and phenotypic selection.
+
+This research extends an existing heterogeneous cellular automata system (HetCA) and applies explicit selective pressures in a cyclic fashion. The HetCA system employs a combination of mutation (via two kinds of mutation operators), heritability (reproduction of cell rules), and competition (via differential reproductive chances) mean that this system exhibits evolutionary dynamics. Further, the authors combine this evolutionary system with explicit selective pressures that fluctuate. Based on a brief literature review, this combination of heterogeneous cellular automata with explicit selection on genotypes in fluctuating environments is novel.
+
+In this work, the authors attempt to show that changing environments aid in the evolution of plasticity. Changing Environments have been linked to plasticity in other model systems, both biological and artificial, but additional work exploring the dynamics of that interaction, especially in a system as exotic as HetCA is valuable for expanding our understanding of the evolution of phenotypic plasticity.
+
+The authors seek to show that their system and experimental conditions conform with the model of plasticity set out in Jablonka et al. (2014). Specifically, Jablonka contends that changing environments create pressures that would select for phenotypic plasticity. Crucially, the authors make an assumption that their new measure of phenotypic proximity (\sigma(t_1,t_2)) relates to plasticity. Specifically, “If environmental changes lead to selection of plasticity… then phenotypes from different individuals of the same lineage observed while environmental conditions are similar should be relatively close [as measured by \sigma] even though individuals from their lineage evolved [through] other environmental conditions between these measure[ment]s.” Little effort is made to validate \sigma, and little evidence is presented that phenotypic proximity is a valid measure of plasticity or epigenetic adaptation. Either work validating \sigma should be presented (possibly by objectively measuring plasticity of a genotype in different environments and relating this measure to \sigma), or this claim should be removed.
+
+The writing quality of this paper is adequate to communicate the desired points. However, certain sections were somewhat disorganized, and lacked sufficient explanation to properly convey the functioning of the system or the specifics of measurement. More details below, under specific concerns.
+
+Other Specific Concerns:
+- Introduction - No particular definition of plasticity, or how plasticity would present in HetCA is ever given.
+- Under “HetCA”, a figure describing the life-cycle of a cell would be well taken. As it is, understanding the relationship between living, decay, and quiescent cell states took several re-readings, and referring to Medernach (2013) to puzzle out, as did the variability of the length of decay. This section should be edited or re-written.
+- Under “Experimental Setup”, the second paragraph describes the transitions of cell states, and *very briefly* describes the probability of propagation of a cell. This probability is crucial to the functioning of the system, particularly to the fluctuating selection mechanism. A figure, or some explanatory text would be useful here.
+- The rationale for performing the Homogenous Tests on the MCG is never explicitly given. One can infer from careful reading that the claims of multi-level selection are intended to be backed up by the results of the homogenous tests, specifically by implying that without the surrounding sets of cells with their own co-evolved sets of rules, plasticity or epigenetic mutation would not be possible. However, this claim is never actually made, and thus cannot be evaluated. Either this claim should be made explicit, or the multi-level selection reference should be removed.
+- The print on figures 2-7 had small, but mostly readable legend text. However, the text of figures 8, 9, and 10 were so small as to be unreadable. These figures should be re-generated with a larger font.
+- The figure captions were excessively brief, essentially only titles. A more helpful caption would walk the reader through what they are seeing.
+- All figures should include statistical information of significance claims, so that the reader can evaluate claims being made.
+
+Technical Soundness
+The experimental design includes an adequate control treatment, and the population sizes and number of replicates should provide adequate statistical power. However, as mentioned above, the \sigma measure is alarmingly unvalidated, and may not show what the authors purport that it shows. Other measures, such as population diversity as measured by entropy, are adequately supported in the literature.
+
+For the most part, the paper includes sufficient information to replicate results. Most other required information can be inferred from Medernach (2013).
+
+Absolute Recommendation
+This paper shows a novel approach to examining evolutionary dynamics in evolving cellular automata, and pioneers a technique by which different kinds of explicit selective pressures can be applied. This work is valuable in setting the foundation for varying fitness functions, and even the evolution of complexity in cellular automata. However, the claims about the evolution of plasticity, and implied claims of multi-level selection are inadequately supported in the paper as submitted. These claims should either be supported, or removed, before the paper should be accepted.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Review 3
+Overall evaluation: 	
+1: (weak accept)
+Reviewer's confidence: 	
+3: (medium)
+Presentation: 	
+3: (poster)
+Review
+Review: 	Authors studied the effects of environmental fluctuations to the evolutionary model called HetCA. The three types of fluctuations were chosen; ScF, LF, and SF. The LF and SF simulations seem to be analogous to the multilevel selection model by Jablonka et al. In the case of ScF, small genotypes could be involved to increase the phenotypic impact of mutations.
+
+Authors are well describing their simulations and results. However, the reviewer was not able to recognize anything new about evolutionary progress, which is not a merely trait of adaption to the environments. I hope authors could touch on some general discussion independent of the specifics of the model.
+Review 2
+Overall evaluation: 	
+2: (accept)
+Reviewer's confidence: 	
+5: (expert)
+Presentation: 	
+4: (oral)
+Review
+Review: 	Nice work.
+The instrumentation and experimentation are great.
+
+"You would have to reconstruct the community..." I suggest moving the rest of the paragraph to the discussion and conclusion section.
+
+I was wondering about the relative size of the genome - (1) is it long enough to be expressive enough (2) you report the overall genomic characteristics as a definition of diversity, but did you do any qualitative assessment of the genomes, is there an emergence of coding vs. non-coding regions especially in context of different environments.
+
+I felt you left me hanging at the discussion.
+- how your findings stack against behavioral biologists such as Peter and Rosemary Grant's work on speciation as a precursor for genetic diversity.
+- is almost seems like some of your work might support their observations.
+- small genotypes make sense, so how about the spatial trait propagation that would lead to diversity
+
+Again, nice work, great paper, I could read a page or two on discussion and conclusion.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Review 1
+Overall evaluation: 	
+1: (weak accept)
+Reviewer's confidence: 	
+3: (medium)
+Presentation: 	
+4: (oral)
+Review
+Review: 	This paper, in its own words, “measure(s) the impact of different types of environmental fluctuations in HetCA” (a heterogeneous cellular automata).
+
+Main comment:
+
+My first question at this point is “why?” What additional understanding of environmental fluctuations in real evolution will this produce?
+
+This paper would be stronger if the introduction stated a hypothesis (about the role of environmental fluctuations) that the model described was being used to test. Models are great, but they are not (or should not) be ends in themselves. The ultimate test of whether a model is worth pursuing (for scientific purposes at least) is how well it can be used to address a question about the real world.
+
+(NB: some artificial life models are intended for application to engineered systems and so may be exempt from evaluation against this criterion, but I don’t get the impression that this is the purpose of this model.)
+
+Your aim is expressed more clearly at the end of the methodology, where you state that you “anticipate that the existence of frequent environmental fluctuations will promote phenotypic selection over genotypic selection.”
+
+I’d encourage you to use this eminently valid question about real evolution, which your model is well-suited to address, to set up the motivation for your paper. Ultimately, your experiments don’t provide a strong answer to this question. This is fine, though should indicate a direction for further exploration, either of scenario- or model-space.
+
+Other comments:
+
+This paper contains some very long sentences. For example, the first sentence of the Phenotypic Comparison section on page 3 comes in at around 60 words. Leave this to Henry James: shorter sentences are easier to read.
+
+Several of the sections in your Results and Analysis launch into a description of *what* you did. It would be helpful to provide the reader with context about *why* you are reporting this particular result/analysis.
+
+Figures 11 and 12 were (on my screen) very indistinct. Would a lower resolution image (ie, a smaller region of the CA) illustrate the differences you discuss more clearly?
+
+
